@@ -179,5 +179,111 @@
 		<li><a href="https://www.w3schools.com/cssref/pr_dim_width.php" target="_blank">width</a>-> can be done in a numberical or a percentage.</li>
 		<li><a href="https://www.w3schools.com/csS/css_text.asp" target="_blank">Color</a>-> Changes the color of the font</li>
 	</ul>
+
+	<!--START OF DIV DIV-->
+	<div>
+		<h2>DIVS (Content Division Element (Used in conjunction with CSS)) | <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">More Here</a></h2>
+		<p>DIVS are a special HTML document that doesn't do anything without CSS. Using a DIV element can allow for an HTML document to be sectioned out and stylized. In general, each element is in their own box, but placing elements inside a DIV can put them into organized boxes that can be moved, stylized, and arranged.</p>
+
+		<p>Using CSS allows for someone to specify what parts of an HTML document to style, including the DIVs and the specific elements that they contain.</p>
+
+		<p>EX) You want to have a certain part of a webpage to have a background and border, and the font inside to be impact. This can be done like so:</p>
+		<ol>
+			<li>Inside the HTML document, create a div and assign it a class -> div class="pog"</li>
+			<li>Inside the CSS document, specify what you want to change -> 
+			.pog{background-color:whatevercolor;} .pog p{font-family:fontofchoice;}</li>
+		</ol>
+
+		<p>A DIV will take on the height and width of the contents.</p>
+		<p>You can also specify...</p>
+		<ul>
+			<li>padding-> Expands the size of a div, between the content and the border</li>
+			<li>border -> draws a line around the DIV. Expands the div size. We can specify width, height, border, and so on, and expands outside of the intenal area. A border of 50 px will make a 300 px object 400 px total. </li>
+			<li>margin -> Expands the space surrounding a div. This can be easily shown when positioning other divs around this one.</li>
+			<li></li>
+		</ul>
+
+	</div>
+	
+	<div>
+		<h2>CSS Box Model -> Easily Visualize CSS adjustments | <a href="https://www.w3schools.com/Css/css_boxmodel.asp" target="_blank"> READ MORE</a></h2>
+		<p>The CSS Box Model can be found in a browser's inspector.</p>
+		<p>Using a CSS Box Model in the inspector will allow for someone to view and make visible adjustments and changes to the website that will not be committed to the code. Changes made here needs to be copied into the CSS to make these changes permanent.</p>
+		<p>The default browser CSS can also be viewed using the CSS Box Model</p>
+		<img src="images/cssboxmodel.png" alt="The CSS Box Model, Firefox Browser">
+		<p>You can also add in custom rules here for the elements and see how it will affect the page in itself.</p>
+		
+
+	</div>
+
+	<div>
+		<h2>Span</h2>
+		<p>Can be used to select just one part of a text to format or modify it with CSS</p>
+		<p>Used in conjunction with CSS</p>
+		<p>Is an Inline Display Element, only taking up as much height and width as it needs to.</p>
+	</div>
+
+	<div>
+		<h2>CSS Display & Position</h2>
+		<p>Display Property | <a href="https://www.w3schools.com/cssref/pr_class_display.php" target="_blank">Read More </a></p>
+		<p>This specifies the display of the element.</p>
+		<ul>
+			<li>Block -> By default some elements are blocks. Take up the whole width of the screen. No other elements will sit next to it.</li>
+			<li>Inline -> These elements take up only as much height and width as they need to. However, you cannot change the width of these elements.</li>
+			<li>Inline-Block-> Contains the benefits as inline, allowing other elements to sit next to it, while allowing the width to be freely changed. May add some space depending on the browser. </li>
+			<li>None -> This removes the element from the website. can be used in the case that you have a quiz and want to hide the answers.</li>
+			<ul>
+				<li>Visibility:hidden -> Makes the element disappear but the element does keep it's position, and other elements still flow as if the element was visible.</li>
+			</ul>
+		</ul>
+		<p>Display does not work unless the position property is set.</p>
+		<a href="https://www.w3schools.com/Css/css_positioning.asp" target="_blank">Read More </a>
+		<p>Even without css, there are predefined rules. Content is everything. Order of elements is based on how its written in the code. Children are inside of their parents. Child objects are on top of their parents on dispaly. </p>
+		<p>We can set css property position to position things the way that we would like to. </p>
+		<ul>
+			<li>static -> All html are static by default. They follow the rules and go with the html flow.</li>
+			<li>relative -> Position the element we want relative to how it would have been positioned. If we change an element to relative, we can move an element based on whre it would have been. we change it using coordinates. We need to remember that when we move an element that has a relative position, it doesn't affect the position of any of the other elements around it. It leaves a ghost space where it used to be, basically. When we change the coordinate properties, what we do is that we are bastically giving the element a margin based on the coordinate.by irself, the position doesnt do anything. it requires the coordinates to change its position. relative to the element to where the element would have been displayed in natural html flow.  </li>
+			<li>fixed -> If a position is fixed, then the item will stay in it's current position. This item will stay fixed in it's position relative to the position. it might be useful for a header bar or a div bar for a website.</li>
+			<li>absolute -> Let's say that there is an image inside of a div. When using absolute and shifting the image to the left, it shifts relative to the parent object (div). The margin is relative to it's parent. The parent is most times the whole webspage. we add a margin to an item bassed on the edge of a parent object. This affects the flow of the html. We take the element out of the flow of the document. The object can be moved anywhere on the screen relative to it's parent. It is easier to move things around using absolute positioning relative to the body, or to the same thing. It is easier for people to think about layout this way. parent doesnt need to be the body. If there was a div inside of a div, the first div would be a parent. Anychanges made to the second div in terms of positioning would be relative to the first div.</li>
+			<li>sticky-> </li>
+		</ul>
+		<p>Centering elements using CSS.</p>
+		<p>text-align -> Must be set in the parent container. this works as long as the elements are inline-blocks or the entire width of the box.</p>
+		<p>if this doesn't work, we can use margin:auto. This centers the object vertically or horizontally. </p>
+		<p>If you have a parent element that centers everything, you might have objects inside that are inline blocks with set widths. These inline blocks will have to be centered by adjusting the margin.</p>
+
+	</div>
+
+	<div>
+		<h1>Changing Fonts</h1>
+		<p>Font-family: can change all the fonts on the wbsite. monospace for coding because it makes everything easy to read.  </p>
+		<p>Cursive and fantasy and low readablity and not oftem used. </p>
+		<p>serif is by default. Times and arial are defaults. </p>
+		<p>We can add specific fonts to our css. font-family: verdana, sans-serif. The font defaults to verdana, but if the system doesnt have it, sans serif is done. </p>
+		<p>Web-safe fonts. There are font familties that most sites can render safetly. no font is 100% websafe. </p>
+		<p>If we want to use a font but are unsure if everyone has it, we can use fallbacks. </p>
+		<p><a href="https://www.cssfontstack.com/" target="_blank">Font Stack for Fallbacks</a></p>
+		<p>What if we want everyone to see the exact same thing that we intended? If you want everyone to use the same font, we can use font embedding. </p>
+		<a href="https://fonts.google.com" target="_blank">Google Fonts can be used to embed a font onto a website. These are fonts that can be commercial. search and add fonts to your desire. Then after finding them, you can add them to your head element, as a link. Then, ensure that the font name is inside of your css code file. </a>
+	</div>
+	<div>
+		<h2>Adding Content</h2>
+		<p><a href="https://www.flaticon.com/" target="_blank">Flat Icon is full of vector gifs and images</a></p>
+	</div>
+
+	<div>
+		<h2>Other CSS Things</h2>
+
+		<h3>Favicons</h3>
+		<p>Icons that appear in a tab. Displays on websites and is a good touch. To use it, use the following in the head. link rel="icon" href="". These are ico (icon files)</p>
+
+
+		<h3>Viewport</h3>
+		<p>Our current window.</p>
+		<p>Using a percentage to change the width of an img will change it to cover that percentage of a screen. (Ex. width =50% == the image will take up 50% of the screen</p>
+	</div>
+
+
+	
 </body>
 </html>
