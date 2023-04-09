@@ -1,0 +1,160 @@
+body{
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	background-color: #FAF9F6 ;
+}
+
+h1{
+	margin-top:0px;
+	color:#66BFBF;
+	line-height:2;
+    font-family: 'Quicksand', sans-serif;
+
+
+}
+
+h2{
+	font-size:2.5rem;
+	color:#ff0045;
+	font-weight: normal;
+	padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+
+
+}
+
+h3, a{
+	color: #eda7ba;
+    font-family: 'Quicksand', sans-serif;
+
+
+}
+
+p{
+	margin: 0px 20px;
+	color: #06053b;
+	font-family: 'Quicksand', sans-serif;
+
+
+}
+
+hr{
+	width: 35%;
+	margin: 10px;
+	display:inline-block;
+	position:relative;
+	
+}
+
+/*Intro Class*/
+.intro{
+	background-color:#eda7ba;
+	padding: 20px;
+
+}
+.intro h1{ 
+	color:#ff0045;
+	font-size:2.5em;
+	text-align: left;
+	line-height: 2;}
+
+.intro p{
+	color: #ff0045;
+	font-size: 1.5em;
+	text-align: left;
+	margin: 0px;
+}
+
+
+/*SKILL ROWS*/
+.skill-row{
+	width: 45%;
+	margin: 20px;
+	
+	text-align: left;
+	line-height: 2;
+}
+
+.img-left{
+	width: 20%;
+	border-radius: 50%;
+	float:left;
+	padding: 0px 0px 10px 0 px;
+}	
+.img-right{
+	width: 20%;
+	border-radius: 50%;
+	float:right;
+	padding:10px 0px 0px 0px;
+}
+/*TETO IMAGE*/
+.about{
+	position:absolute;
+	left:675px;
+	top:127px;
+	text-align: center;
+	display:inline-block;
+
+}
+
+.about-link{
+	color:#06053b;
+}
+
+@keyframes tetospeeen{
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(359deg)}
+}
+
+.tetofb{
+	
+	animation: tetospeeen;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
+
+/*CONTACT*/
+.btn {
+	margin: 20px;
+  border-radius: 28px;
+  color: #ffffff;
+  font-size: 20px;
+  background: #eda7ba;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ff0045;
+  text-decoration: none;
+}
+
+.contact-me{
+	margin: 20px;
+	padding: 0px 0px 50px 0px;
+}
+
+
+.Contact-p{
+	margin: 0px 20px 50px 20px;
+}
+
+/*footer*/
+
+footer{
+	background-color: #06053b;
+	padding: 20px;
+}
+
+.footer-link{
+	color: white;
+	padding: 0px;
+}
+
+
+.footer-p{
+	padding: 0px auto;
+	margin: 0px;
+	color: white;
+}
