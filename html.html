@@ -6,6 +6,8 @@
 	<title></title>
 </head>
 <body>
+
+	<p>Note! The page has been updated according to the new updated lessons.</p>
 	<!--About HTML-->
 	<h1>What is HTML?</h1>
 	<p>HTML is the base framework (content and structure) of a website. It is possible to create websites that are just HTML, but not just CSS or Javascript.</p>
@@ -19,7 +21,7 @@
 	<h2>Tags</h2>
 	<!--Start of Tag Anatomy-->
 	<h3>Tag Anatomy</h3>
-	<p>The anatomy of an HTML tag often may look as follows, with a starting tag, and an ending tag.</p>
+	<p>The anatomy of an HTML element often may look as follows, with a starting tag, and an ending tag.</p>
 	<p>Some others are self terminating, so they are structured like so -> < element></p>
 	<img src="images/anatomyofHTMLtag.png" alt="an HTML element with a start tag, content, and an ending tag">
 	<p>Tags make requests to a browser to display text in a way that was designated.</p>
@@ -33,7 +35,7 @@
 	</ul>
 
 	<!--Start of Headings Section-->
-	<h3>Heading Tag < h#>< /h#></h3>
+	<h3>Heading Tag < h#>< /h#> | <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">MDN Reference</a></h3>
 	<p>The headings here get smaller as the numbers get larger.</p>
 	<ul>
 		<li><h1>h1 -> Largest Heading</h1></li>
@@ -41,21 +43,29 @@
 		<li><h3>h3</h3></li>
 		<li><h4>h4</h4></li>
 		<li><h5>h5</h5></li>
-		<li><h6>h6</h6></li>
+		<li><h6>h6 -> Smallest Heading</h6></li>
 	</ul>
+	<p>To get a better understanding of headings, we can use a table of contents as an example. The topmost heading, such as a title might be a (H1) and then subheadings such as sections could be(H2). The subheadings are related to the heading's topic.</p>
+	<p class="tips">Only have 1 H1 Element per page. This can be correlated to the page's topic.</p>
+	<p class="tips">Use the heading tags in order. Start with an H1, and H1's subtopics are H2. H2's subtopics are H3s... and so forth.</p>
 	<!--End of Headings Section-->
 
 	<!--Start of Paragraphs-->
-	<h3>Paragraph Tag < p>< /p></h3>
+	<h3>Paragraph Tag < p>Content< /p> | <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">MDN Reference</a></h3>
 	<p>P tags are paragraph tags. Items inside are grouped into the same paragraph.</p>
+	<p>Screen readers can read the beginnings of each paragraph, indicated by the p tags.</p>
+
+
 	<!--Start of Line Breaks-->
-	<h3>Line Breaks < br></h3>
-	<p>Used to give some space. It is a self terminating tag, and works all by itself.</p>
+	<h3>Line Breaks < br /> or < br></h3>
+	<p>Used to give some space. It is a self terminating/void element, and works all by itself.</p>
+	<p>Can be used when there is a paragraph that has space in between each line, but the whole work itself is still the same paragraph (IE a poem)</p>
+	<p class="tips">Do not use a BR element if you want two paragraphs. Just use two paragraph tags. This is for screen readers.</p>
 	<!--End of Line Breaks-->
 
 	<!--Start of HR tags-->
-	<h3>Horizontal Rules < hr></h3>
-	<p>Horizontal Rules are created to draw horizontal lines onto the page. It is a self terminating tag.</p>
+	<h3>Horizontal Rules < hr /> or < hr></h3>
+	<p>Horizontal Rules are created to draw horizontal lines onto the page. It is a self terminating/void element.</p>
 	<p>We are able to change the line size with the html attributes.</p>
 
 	<h3>Center Tag < center>< /center></h3>
@@ -71,8 +81,9 @@
 		<li><strong>strong -> This text has a strong meaning. When you want to make something bold, use strong.</strong></li>
 	</ul>
 	<!--Start of Images-->
-	<h3>Images < img src=""></h3>
+	<h3>Images < img src=""> or < img src=""/></h3>
 	<p>Images can be added to pages. Image elements are self-terminating, but do need to include img src. The src is a link to the source of the image, be it an online image or an image that is stored in the file structure.</p>
+	<p>Void element</p>
 	<ul>
 		<li>Online images -> You can find an image online and right click to copy the image address. This image address can then be used as the src of the image. However, this is hosted on another site's servers, so if the server goes down, there might not be an available image...</li>
 		<li>Local images -> You must put an image into the website's file structure and link back to the image in the src.</li>
@@ -84,13 +95,14 @@
 	</ul>
 	<!--end of Images-->
 	<!--Start of Links-->
-	<h3>Linking using the a element < a href=""> Link Text < /a></h3>
+	<h3>Linking using the a element < a href=""> Link Text < /a> | <a draggable=true href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">MDN Reference</a></h3>
 	<p>If you wanted to direct someone to a certain page, you can add a link using an anchor tag.</p>
 	<p>By the way, the convention is that links are blue if they haven't been clicked on, and purple if they have been.</p>
 	<p>Attributes include...</p>
 	<ul>
 		<li>href -> A URL a link points to. It can be internal or an external URL. External URLS must use an http/s:// when navigating.</li>
 		<li>target -> Says where the link will open. <a href="https://www.w3schools.com/tags/att_a_target.asp" target="_blank">This will open the w3Schools targets in a new tab </a></li>
+		<li>draggable -> setting an element to be draggable = true will allow for the link to be dragged around.</li>
 	</ul>
 	<!--End of Links-->
 	<!--Start of Lists-->
@@ -105,7 +117,7 @@
 	<p>There are also some attributes that can be used on lists as well, such as an attribute to change the type of bullet or number that is used on the list.</p>
 	<p>Elements include...</p>
 	<ul>
-		<li>start -> Can be used to change where the counting starts for list items.</li>
+		<li>start -> Can be used to change where the counting starts for list items. start=5 starts counting at 5</li>
 		<li>type -> Can be used to turn numbers into roman numerals.</li>
 	</ul>
 	<!--End of Lists-->
