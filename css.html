@@ -282,7 +282,7 @@
 
 	<div>
 		<h2>Span</h2>
-		<p>Can be used to select just one part of a text to format or modify it with CSS</p>
+		<p>Can be used to select just one part of a text to format or modify it with CSS.</p>
 		<p>Used in conjunction with CSS</p>
 		<p>Is an Inline Display Element, only taking up as much height and width as it needs to.</p>
 	</div>
@@ -351,6 +351,70 @@
 
 		<p>line height is line-height. can be specified with number. The perfered way is the single value without a unit. </p>
 
+	</div>
+
+	<div class="responsive">
+		<h2>Responsive Websites</h2>
+		<p>This is how the layout should change depending on the size of a screen. This might be a different view for a mobile site VS a desktop site VS a tablet site.</p>
+
+		<p>Done through a few different methods</p>
+
+		<ul>
+			<li>Media Queries -> Used instead of a selector in CSS. </li>
+			<li>CSS Grid -> We create a parentdiv that contains divs within it. In the parent div, we give it a display:grid property. Then we also set grid-template-columns and rows, and gaps. </li>
+			<li>Flexbox -> This can create 1D layouts easily. </li>
+			<li>External Frameworks-> Things such as a bootstrap framework.</li>
+		</ul>
+		
+
+		<h3>Mediaqueries |<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">MDN Reference</a></h3>
+
+		<p>Used to display a different version of chosen elements when the screen is a certain width.</p>
+		<p class="example"> @media (breakpoint){rules}</p>
+
+		<ul>
+			<li>breakpoint -> Can be used to define the screensize that elements will appear at. </li>
+			<ul>
+				<li>(max-width:value) says if the screen is less than value then change the elements </li>
+				<li>(min-width:value) says that if the screen is more than some value then change the elements.</li>
+				<p>You can also target two different sizes using the AND keyword.</p>
+				<li>(min-width) AND (max-width) says target the sizes between these two sizes</li>
+				<li>(max-width) AND (min-width) targets the sizes outside of the two spaces.</li>
+			</ul>
+			<li>screen/print -> used to target if the element is meant for a screen or print.</li>
+			<li>orientation -> sees what way the screen is oriented.</li>
+		</ul>
+		<p>Example of use</p>
+		<p class="example">
+			h1{font-size:30px;} <br>
+			<br>
+			@media (max-width:600px){ <br>
+			/*Used for sites that are <600px wide*/<br>
+			h1{font-size:20px;}
+		}
+		</p>
+
+		<p>For example, if we define a div that has a height and a width, then later define @media(breakpoint){div{new height and width}}, the div will change when the breakpoint conditions are met</p>
+
+
+
+
+		<h3>CSS Grid | <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">Read More Here</a></h3>
+		<p>1 fr is a fraction of the screen. </p>
+		<ul>
+			<li>grid-template-columns</li>
+			<li>grid-template-rows</li>
+			<li>gaps</li>
+		</ul>
+		<p>can create a complex layout very quickly, and can specify specific classes to certain parts of the layout.</p>
+
+
+		<h3>Flexbox | <a href="flexbox.html" target="_blank">Flexbox</a></h3>
+		<p>Good at displaying information on a horizontal or a vertical line.</p>
+		<p>Uses display:flex, and divides up the width depending on the flex: value. This divides height up by ratios. </p>
+
+		<h3>Bootstrap</h3>
+		<p>Divides the space up to 12 columns.</p>
 	</div>
 
 	<div>
