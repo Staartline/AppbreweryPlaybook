@@ -23,6 +23,17 @@
 			margin:5px;
 		}
 
+		.example{
+			border-style: 5px solid black;
+			background-color: lightgrey;
+		}
+
+		.container{
+			display:grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			gap:10px;
+		}
 	</style>
 </head>
 <body>
@@ -30,9 +41,71 @@
 	<div class="header">
 		<a href="./index.html" target="_blank">home</a>
 		<a href="./css.html" target="_blank">css</a>
+		<p>Note! This page is written using CSS Grid</p>
 	</div>
-	<div class="intro">
-		<h1>Grid</h1>
+
+	<div class="container">
+		<div class="intro">
+			<h1>Grid</h1>
+			<p>This is good for 2D Layouts or websites that have different sections.</p>
+			<p>Flexbox VS Grid. Flexbox is good for aligning something on a 1D line. Grid is good for laying something out on a 2D grid or layout. There are some times where these tools might be better than another, or where both of these things can be implemented on a single page.</p>
+			<p>A 1D grid layout will be different than a flexbox layout. This happens most with the spacing between each element on the page.</p>
+			<p>You can combine flexbox with grids and grids with flexboxes to create a layout that you would like (they each have their own use cases).</p>
+		</div>
+
+		<div class="syntax">
+			<h2>Syntax</h2>
+			<div class="example">
+				< div class="container"><br>
+					< p> content </ p><br>
+					< p> content </ p><br>
+					< p> content </ p><br>
+				< /div><br>
+				<br>
+				<p>styles.css<p>
+				<p>.container{<br>
+					display:grid; <br>
+					grid-template-columns: 1fr 1fr;<br>
+					grid-template-rows: 1fr 1fr;<br>
+					gap:10px;<br>
+				}<br></p>
+			</div>
+
+			<p>The p elements will be the blocks. </p>
+			<p>Default behavior will try to take up the whole width of the screen, so it might be good to define the width of the container.</p>
+			<p>fr -> If we say 1fr 2fr, then we want the second column to be twice as large as the first one (1:2). This is the ratio of the page.</p>
+		</div>
+
+		<div>
+			<h2>Grid Sizing</h2>
+			<p>Grid-template-column/grid-template-rows -> We can define rows and columns of a grid using px, rem, or fr. Using REM or PX for the grid means that the grid will not be responsive. Using fr fits the grid to the screen.</p>
+			<p>Grid-template: rows/columns -> We may also define both the rows and the columns of a grid using grid-template: rows / columns</p>
+			
+
+			<p>Auto -> We may also define rows and columns using the auto keyword. Columns will respond to the width of the screen. Rows will respond to the height of the content. </p>
+			<p>fr -> used to divide the grid into ratios. if someone wrote 1fr 2 fr, the ratio of the columns would be 1:2. This grows and shrinks depending on the screensize, and the content width.</p>
+			<p>minmax(min,max) -> used to define the min and max width that we want a column to be. </p>
+			<p>repeat(times, size) -> used when we want to repeat something. We want to define repetition easily.  </p>
+			<p>items are laid out in a F layout. Anything that is added after we have defined our rows and columns, then css will try to adjust for the new item </p>
+			<p>grid-auto-rows -> when we create new rows, then this defines how new items are added to a grid.  </p>
+
+			<p>We can use chrome developer tools to find out what is happening in our grid.</p>
+		</div>
+
+		<div>
+			<h2>Grid Placement</h2>
+		</div>
+
+		<div>
+			<h2>Supplementary Material</h2>
+			<ul>
+				<li><a href="https://youtu.be/9zBsdzdE4sM" target="_blank">Learn CSS Grid in 20 Minutes - Web Dev Simplified</a></li>
+				<li><a href="https://www.youtube.com/watch?v=rg7Fvvl3taU" target="_blank">Learn CSS Grid the Easy Way - Kevin Powell</a></li>
+				<p>You can have an easier time to visualize the number of rows and columns that you need inside of a container by drawing the prefered layout, then drawing the different boxes that you will need.</p>
+			</ul>
+		</div>
+
 	</div>
+
 </body>
 </html>
