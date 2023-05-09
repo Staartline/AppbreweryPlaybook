@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flexbox</title>
+
+
+	<style>
+		body{
+			margin:0px;
+
+		}
+		
+		.container{
+			display: inline-flex;
+			gap:10px;
+			flex-direction: column;
+			margin: 10px;
+		}
+
+		.p-header{
+			background-color:pink;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.container > * {
+			flex-basis: 70px;
+		}
+
+		.example{
+			border:solid black 2px;
+			background-color: lightgray;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="p-header">
+		<a href="index.html">Home</a>
+		<a href="css.html">CSS</a>
+	</div>
+	<div class="container">
+
+
+		<div class="intro">
+			<h1>Flexbox. Creating page layouts in a simple way. | <a href="https://www.w3schools.com/csS/css3_flexbox.asp" target="_blank">W3Schools Reference</a></h1>
+
+			<p>Table use case -> We want to only use a table to display tabular information</p>
+			<p>Float use case -> We want to only use float to float images and wrap text and other elements against it.</p>
+
+			<p>Flexbox is used to create a page layout in a simple way, across a row or a column.</p>
+			<p>In this case, we want to use display:flex or display:inline-flex. Though this uses display, it uses a diferent positioning system and ruleset from inline, inline-block, block, and none.  </p>	
+
+			<p>display:flex -> treats the div like a block element, and occupies the whole screen (100%).</p>
+			<p>display:inline-flex -> treats the div like an inline element, meaning other elements can also live on the same line. you may set a width</p>
+
+			<p>In both of these positioning systems, the width of the div is determined by the content size.</p>
+
+
+			<p>To use flexbox, we need to put all of our information into DIVs, then wrap this div in a container that has the display property set to flex.</p>
+
+			<p class="example">
+				< div class="container"> <br>
+					< div class="one">1< /div> <br>
+					< div class="two">2< /div> <br>
+				< /div> <br>
+				<br>
+				styles.css<br>
+				<br>
+				.container{display:flex; gap:10px;}
+			</p>		
+		</div>
+
+		<div class="properties">
+			<h2>Properties</h2>
+			<ul>
+				<li>gap -> Adds a gap between each section/div. Can be done with px, rem, em, fr</li>
+				<li>flex-direction -> determines the direction that the items will be laid out in. row(left to right), column (top to bottom) </li>
+				<li>flex-basis -> sets a height/ width for our child containers on our site depending on the flex direction. We should do this by setting the parent container to an inline-flex, and selecting the children of the container to set. </li>
+			</ul>
+		</div>
+
+		<div class="directions">
+			<h2>Directions (flex-direction) | <a href="https://www.w3schools.com/csS/css3_flexbox_container.asp" target="_blank">W3Schools reference</a></h2>
+			<p>There is a default HTML flow, which has all the elements fit on a row, and then continue onto the next row.</p>
+			<p>Flexbox also has a default flow (flex-direction), where items are laid down across a main axis. This means that items are laid down across this axis. This is default set to row, so items are laid out in a row, from left to right.</p>
+			<p>flex-directon:row -> items will be laid out in a row from left to right.</p> 
+			<p>Flex-direction:column -> Items will be laid out top to bottom.</p>
+			<p>The cross axis would be perpendicular of the flex-direction. If we set flex-direction:row, then the cross axis is top to bottom.</p>
+
+
+		</div>
+
+		<div class="layout">
+			<h2>Layout</h2>
+			<p>When thinking about layout, we must consider if the layout is going into the child(item) or the parent(container).</p>
+
+			<p>Practice using flexbox froggy -> <a href="https://flexboxfroggy.com/" target="_blank">Link Here</a></p>
+			<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox tricks</a></p>
+
+			<h3>Parent/Container</h3>
+			<p>Justify-content -> Distributes the items along the main axis. 
+			<ul>
+				<li>flex-end -> sends all the items to the end of the box.</li>
+				<li>space-between -> adds spacing between all of the items</li>
+				<li>center -> centers all of the items</li>
+				<li>space-around -></li>
+			</ul>
+			<p>Flex-wrap -> Used when we run out of space on a horizontal. Default set to nowrap.</p>
+			<ul>
+				<li>nowrap -> Items do not wrap when the container is resized</li>
+				<li>wrap -> items will wrap to the next line</li>
+			</ul>
+
+
+			<h3>Child/Items</h3>
+			<p>Order -> If you want to rearrange an item, then you can set an order inside of the child. By default, the order is set to 0. </p>
+			<p>Align-items -> the position of the items along a cross axis. we need to set a height of the container (vh is viewport height) for this to work. </p>
+
+			<ul>
+				<li>flex-start -> items will stick to the top.</li>
+				<li>flex-end -> puts the items at the bottom</li>
+				<li>center -> puts items in the center of the container</li>
+				<li>stretch -> stretches the item across the whole container</li>
+				<li>align-self -> can be used to set individual items.</li>
+			</ul>
+			<p>Align-content -> Works like align-items, but only works when flex-wrap is set to wrap. </p>
+
+
+			<h3>Centering Something to Screen</h3>
+			<p>To center something, use a combination of display:flex, justify-content:center, align-items:center, and height:#vh</p>
+		</div>
+
+		<div class="sizing">
+			<h2>Sizing the Items</h2>
+			<p>Flexbox will automatically shrink itemboxes as the windowscreen changes, but sometimes we don't want that to happen. </p>
+
+			<h3>Priority List</h3>
+			<p>minimum/maximum width set -> flex-basis -> height/width property -> content width</p>
+
+			<p>maximum width -> This looks at the longest line of text in the container. The maximum width is respected as long as space allows for it.</p>
+			<p>mimumum width -> This is the longest word in the container.</p>
+			<p>flex-basis ignores the maximum width.</p>
+			
+			<h3>Shrinking</h3>
+			<p>min-width: This is how small an item can get to. </p>
+			<p>flex-shrink -> will shrink the items until it gets to the min-width</p>
+
+			<h3>Growing</h3>
+			<p>Max-width: this is as large as the item can grow. Max posibly the item can grow. </p>
+			<p>flex-grow-> will grow as the page expands.</p>
+
+			<p>If we wanted to write it all at once, we could write...</p>
+			<p>flex: grow shrink basis</p>
+			<p>flex: 1; is grow 1 shrink 1 basis 0</p>
+
+			<p>This can be done to keep the ratios when doing these items. </p>
+		</div>
+
+		<div>
+			<h3>Supplementary Material</h3>
+			<a href="https://www.youtube.com/watch?v=u044iM9xsWU" target="_blank">Learn Flexbox the easy way</a>
+		</div>
+	</div>
+
+
+</body>
+</html>

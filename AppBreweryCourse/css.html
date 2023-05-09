@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS - HTMLCodebook</title>
+
+	<style>
+		body{
+			background:mintcream;
+			margin:0px;
+		}
+		hr{
+			border-top: 4px dotted pink;
+			border-left: 0px;
+			border-right: 0px;
+			border-bottom: 0px;
+			width:5%;
+		}
+		.tips{
+			color:red;
+		}
+
+		header{
+			background-color:lightblue;
+		}
+		header > a{
+			color:black;
+			margin-left: 20px;
+
+		}
+
+		div{
+			margin-left:10px;
+			margin-right:10px;
+		}
+
+		.example{
+			border: 2px black solid;
+			background-color: lightgray;
+			padding-top:10px;
+			padding-bottom:10px;
+			padding-left:3px;
+		}
+
+		ol.instruction{
+			border:2px black solid;
+			background-color:lightgray;
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+
+	</style>
+
+</head>
+<header>
+	<a href="./index.html">Home</a></li>
+</header>
+<body>
+	<div class="intro">
+		<h1>What is CSS | Cascading Style Sheets <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Reference</a></h1>
+		<p>Cascading Style Sheets is a style language that is used to modify the look of a markup language. This language only modifies the look of an existing file. All browsers have their own default CSS which we can change through our custom CSS. In CSS, everything on a webpage is made of boxes that we can change, arrange, and style.</p>
+		<p>Before CSS, using HTML elements and attributes can be difficult as lots of code needs to be written to write something simple and making coding errors or spelling mistakes can be easy.</p>
+
+		<h2>Useful Links</h2>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing" target="_blank">Best Practices</a></li>
+			<li>Pesticide (<a href="https://chrome.google.com/webstore/detail/pesticide-for-chrome/bakpbgckdnepkmkeaiomhmfcnejndkbi" target="_blank">Chrome</a> | <a href="https://addons.mozilla.org/en-US/firefox/addon/pesticide-for-firefox/" target="_blank">Firefox</a>) -> Used to show the boxes on a webpage that can be styled using CSS.</li>
+		</ul>
+		<hr>
+		
+	</div><!--End of What is CSS -->
+	<div class="csscomments"><!--Start of Comments -->
+		
+		<h2>CSS Comments</h2>
+		<p>Comments are written in CSS using a /**/ format.</p>
+		<p class="example">/*comment goes here.*/</p>
+		<p>Comments can be used to organize code, and explain what certain parts of the CSS should do.</p>
+		
+		<hr>
+	</div><!--End of Comments-->
+
+	<div class="typesofCSS"><!--Start of Types of CSS-->
+	<h2>Types of CSS | <a href="https://www.w3schools.com/CSS/css_howto.asp" target="_blank">W3Schools Reference</a></h2>
+
+		<div class="inlinecss"><!--Start of INLINE CSS-->
+			<h3>Inline CSS -> Using the style attribute</h3>
+			<p>We use inline CSS to write css into an element using the style attribute. This can be done to do things such as change a color or a font size.</p>
+			<p class="example" style="background:pink; font-family:roboto;">We use a style tag to change the background and the font.</p>
+			
+			<h4>How to set up Inline CSS</h4>
+			<ol class="instruction">
+				<li>Choose an element to inject CSS into. EX-> p</li>
+				<li>Add a style attribute. EX -> < p style=""></li>
+				<li>Add some properties. EX -> < p style="font-family:roboto;"></li>
+				<ul>
+					<li>There is a colon(:) between the property and value. EX -> property:value</li>
+					<li>End the statement with a semicolon(;)</li>
+					<li>Ensure that the statement is in double quotes("")</li>
+				</ul>
+				<li>Add in more properties if you want. EX -> p style="background:pink; font-family:roboto;</li>
+			</ol>
+
+			<p>What if we wanted to change every element on the page? We would have to change all of the elements on the page to contain the same style attribute... There is an easier way (internal css)!</p>
+		</div><!--End of Inline CSS-->
+
+		<div class="internalcss"><!--Start of Internal CSS-->
+			<h3>Internal CSS -> The Style element inside the head element</h3>
+			<p>We use internal CSS when we want to change the way that every element (of the same type) looks on a page. This is done so that we don't need to change every single element individually when we want to update a page's appearance.</p>
+
+			<h4>How to set up Internal CSS</h4>
+			<ol class="instruction">
+				<li>Find the head element in your HTML file.</li>
+				<li>Insert the style element (< style> < /style>) into the head element.</li>
+				<li>Add in elements, classes, or ids to change (element, .classes, #ids). </li>
+				<li>Each css rule should look something like so. EX -> body{background:pink; font-family:roboto;}</li>
+			</ol>				
+		</div><!--End of Internal CSS-->
+
+		<div class="externalcss"><!--Start of External CSS-->
+			<h3>External CSS -> Link in the CSS File</h3>
+			<p>We use external CSS when you want a style to be applied across the entirety of the website without wanting to copy internal CSS element to every affected page.</p>
+			<p>In short, the external css will modify the appearance of any page that links to it.</p>
+			<h4>How to set up External CSS</h4>
+			<ol class="instruction">
+				<li>Create a folder named css. This goes inside of your website's project folder.</li>
+				<li>Inside of the css folder, create a file called styles.css</li>
+				<li>Link the styles.css file to your HTML document. Using the < link> element inside of the head element of your HTML file as follows -> (link rel="stylesheets" type="text/css" href="css/styles.css") </li>
+					<ul>
+						<li>By the way, if there is a / in /css/styles.css, the / in the front of the directory means that the file is located in the root, instead of the same directory level. If you remove the /, then the file is in the same directory as the current file that is calling it.</li>
+					</ul>
+			</ol>
+		</div><!--End of External CSS-->
+
+		<hr>
+	</div><!--End of Types of CSS-->
+
+	<div class="priority"><!--Start of Hierarchy-->
+		<h2>Hierarchy | <a href="https://www.w3schools.com/css/css_specificity.asp" target="_blank">Specificity Reference</a></h2>
+		<p>If we specify a CSS rule in two places, which one is applied? </p>
+		<p>When writing CSS, more specific code overwrites the more general code. If you write a global rule, and then inline CSS, priority is given to inline CSS. With this in mind, you can apply specific changes to the code by writing inline CSS.</p>
+
+		<h4>Types of CSS Ranking</h4>
+		<p>Least Specific -> styles.css (External CSS)</p>
+		<p>More Specific -> style element in the head element (Internal CSS)</p>
+		<p>Most Specific -> element style="" (Inline CSS)</p>
+
+		<p class="tips"> TIP! It is recommended that you apply all styles in your external CSS (styles.css) file.</p>
+
+		<h4>General CSS rankings</h4>
+		<p>Least Specific</p>
+		<p>Position -> If there are two of the same rules, but their values are different, the value that is lower down on the list is applied </p>
+		<p>Specificity -> Refers to how specific the rules are. Elements -> Classes -> Attributes -> IDs</p>
+		<p>Type -> styles.css -> internal css -> inline css</p>
+		<p>Keywork !important -> Adding the !important keyword to a rule after the value will ensure that this is applied.</p>
+		<p>Most Specific</p>
+
+		<hr>
+	</div><!--End of Hierarchy-->
+	<div class="debugging"><!--Start of debugging-->
+		<h2>Debugging | <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS" target="_blank">MDN Reference</a></h2>
+		<p>When code has errors such as logic issues or spelling mistakes, debugging is important!</p>
+		<p>To debug, you should first try to identify a problem. For example, if you have inserted a CSS file but do not see any CSS, check the link for the css file. If there is an issue where parts of the css page is working but other elements are not, you can try checking for things such as a spelling error or for inline css.</p>
+		<p>You can use the browser's built in developer tools to try to find issues. Chrome developer tools can be used to find missing files when running an HTML page. Developer tools can also tell us what types of styles are currently running on a page as well.</p>
+		<p class="tips"> TIP! To ensure that CSS is working on the current page, make a dramatic change to part of the site's content, such as changing the background-color property, to check.</p>
+		<hr>
+			
+	</div><!--End of Debugging-->	
+	
+	<div class="csssyntax"><!--Start of CSS Syntax-->
+	<h2>CSS Syntax <a href="https://www.w3schools.com/Css/css_syntax.asp" target="_blank">W3Schools Reference</a></h2>
+	<p>Syntax is the grammer of a programming language, and CSS syntax is no different. </p>
+	<p class="example">selector {property:value;}</p>
+
+	<ul>
+		<li>selector -> Who are we changing (p, h1, h2...ect.). </li>
+		<li>property -> What are we changing (background-color, font-family, border...ect.). Multiple properties can be applied to the selector.</li>
+		<li>value -> How are we changing the property (black, blue, roboto, dotted...). This depends on the property.</li>
+	</ul>
+
+
+	<p class="tips"> The best practice for css is to put each changed property in alphabetical order. EX -> p{background-color:orange; color:green; font-family:roboto;}</p>
+	<p>All CSS Statements must end with a semicolon(;) at the end of the statement.</p>
+	<div class="selectors">
+		<h3>Selectors can be the following</h3>
+			<ul>
+				<li>elements -> h1, p, div </li>
+				<ul>
+					<li>Applies a change to every single instance of the element. EX -> Applying a red color(backgroundcolor:red;) to an img will apply the red color to every img on the page.</li>
+				</ul>
+				<li>classes -> .class</li>
+				<ul>
+					<li>Used for specific styling and targets specific elements. </li>
+					<li>Can be used on multiple elements on a page.</li>
+					<li>Can be used when you want to apply the same style to a group of elements.</li>
+					<li>Elements are allowed to have more than one class. EX-> < element style="class1 class2"></li>
+				</ul>
+				
+				<li>ids -> #idname</li>
+				<ul>
+					<li>Most specific</li>
+					<li>Only one instance per ID is allowed on a page. (Classes can be used multiple times)</li>
+					<li>One ID can only be used for one element (Ie. < p id="id1"> means that it cannot use id2, or id3)</li>
+					<li>ID is used sparingly. It is suggested not to use this, but there are some cases where it might be useful.</li>
+				</ul>
+			</ul>
+
+			<p>If you mispell the selector or the properties, the CSS might not work correctly.</p>
+			<p>Each element can only have ONE(1) ID. They can have multiple (MORE THAN ONE) classes, though! </p>
+			<p>The hierarchy for specificity is (least specific) element -> class -> (most specific) ID</p>
+
+			<h3>Targetting Selectors</h3>
+			<p>There are different ways that selectors can be targeted.</p>
+			<ul>
+				<li>Group Rule -> Applies the same style of all of the selectors.</li>
+				<p class="example"> selector{rule}</p>
+				<li>Target Element Attributes</li>
+				<p class="example">p[draggable]{color} changes all p elements that have the draggable attribute to the color. You can also select the value of the attribute. If < p draggable="true"> and < p draggable="false"> then if your css contains p[draggable="true"]{color}, only the p draggable that is true will change color.</p>
+				<li>Descendent-> Change the css of a selector2 that is inside selector1. The style is applied to the selector2 as long as the selectors match.</li>
+				<p class="example"> selector1 selector2{rule}</p>
+				<li>Parent Child -> If there is an element, this targets only direct children of the element.</li>
+				<p class="example"> parentselector > childselector {rule}</p>
+				<li>Chaining Selectors -> This will apply the style to selectors when all of the selectors in this chain are in the element. If there is an element in the chain, it goes first.</li>
+				<p class="example"> selectorselector{rules} | element.class#id{rule}| element#id{rule}</p>
+				<li>Ancestor</li>
+				<p class="example"> selector selectorselector{rule}</p>
+				<li>Changing Multiple selectors-> Changes both elements that are listed, using a comma</li>
+				<p class="example"> h1, h2{property:value;}</p>	
+			</ul>
+			<h3>Psuedoclasses</h3>
+			<p>Classes can have different states. On occasion, if one would want to hover over the elements on a page, they can change the values.</p>
+			<p>For example, if a user were to hover over an image, the background color of the image may change.</p>
+			<p class="example">img:hover{property:value}</p>		
+	</div>
+	<div class="properties">
+		<h3>Properties | <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">MDN reference</a></h3>
+		<ul>
+			<p>Colors</p>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank">background</a>-> changes background color. You can use a <a href="https://www.w3schools.com/cssref/css_colors.php" target="_blank">color name</a>, or a <a href="https://colorhunt.co/" target="_blank">hexcode</a> to change the color.</li>
+			<li><a href="https://www.w3schools.com/csS/css_text.asp" target="_blank">color</a>-> changes font color. You can use hex codes, color numbers or named colors.</li>
+			<p>Fonts</p>
+			<li><a href="https://www.w3schools.com/css/css_font_size.asp" target="_blank">font-size</a> -> changes font size. can be done in px(1/96) pt(1/72) em(100% of parent) rem(100% of root). Developers should set the font to be rem to avoid confusion with parents. </li>
+			<li><a href="">Font Family</a>-> changes the font. Include a desired font, and a fallback font. You can choose a font using sites such as <a href="https://fonts.google.com/" target="_blank"> Google Fonts</a></li>
+			<p>Borders</p>
+			<li><a href="https://www.w3schools.com/cssref/pr_border-style.php" target="_blank">border-style</a>-> Changes the border's style. This can be a border around an image or a textbox.</li>
+			<li><a href="https://www.w3schools.com/cssref/pr_dim_height.php" target="_blank">height</a>-> changes the height of our css box.</li>
+			<li><a href="https://www.w3schools.com/cssref/pr_dim_width.php" target="_blank">width</a>-> changes the css box's width. can be numberical or a percentage.</li>
+		</ul>
+	</div>
+	<hr>
+	</div><!--End of CSS Syntax-->
+
+	<div class="div"><!--START OF DIV DIV-->
+		<h2>DIVS (Content Division Element (Used in conjunction with CSS)) | <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">More Here</a></h2>
+		<p>DIVS are a special HTML element that doesn't do anything without CSS. Using a DIV element can allow for an HTML document to be sectioned out and stylized. In general, each element is in their own box, but placing elements inside a DIV can put them into organized boxes that can be moved, stylized, and arranged.</p>
+		
+		<p>EX-> You want to have a certain part of a webpage to have a background and border, and the font inside to be impact. This can be done like so:</p>
+		<ol class="instruction">
+			<li>Inside the HTML document, create a div and assign it a class -> < div class="pog"></li>
+			<li>Inside the CSS document, specify what you want to change -> 
+			.pog{background-color:whatevercolor;} .pog p{font-family:fontofchoice;}</li>
+		</ol>
+
+		<p>A DIV will take on the height and width of the contents.</p>
+		<p>You can also specify...</p>
+		<ul>
+			<li>padding-> Expands the size of a div. Adds space between the content and the border</li>
+			<li>border -> Draws a line around the DIV. Expands the div size. We can specify width, height, border, and so on, and expands outside of the intenal area. A border of 50 px will make a 300 px object 400 px total. </li>
+			<li>margin -> Expands the space surrounding a div. This can be easily shown when positioning other divs around this one.</li>
+		</ul>
+
+	</div>
+	
+	<div class="cssboxmodel">
+		<h2>CSS Box Model -> Easily Visualize CSS adjustments | <a href="https://www.w3schools.com/Css/css_boxmodel.asp" target="_blank"> READ MORE</a></h2>
+		<p>The CSS Box Model can be found in a browser's inspector.</p>
+		<p>Using a CSS Box Model in the inspector will allow for someone to view and make visible adjustments and changes to the website that will not be committed to the code. Changes made here needs to be copied into the CSS to make these changes permanent.</p>
+		<p>The default browser CSS can also be viewed using the CSS Box Model</p>
+		<img src="images/cssboxmodel.png" alt="The CSS Box Model, Firefox Browser">
+		<p>You can also add in custom rules here for the elements and see how it will affect the page in itself.</p>
+	</div>
+
+	<div>
+		<h2>Span</h2>
+		<p>Can be used to select just one part of a text to format or modify it with CSS.</p>
+		<p>Used in conjunction with CSS</p>
+		<p>Is an Inline Display Element, only taking up as much height and width as it needs to.</p>
+	</div>
+
+	<div>
+		<h2>CSS Display & Position</h2>
+		<h3>Display Property | <a href="https://www.w3schools.com/cssref/pr_class_display.php" target="_blank">Read More </a></h3>
+		<p>This specifies the display of the element.</p>
+		<ul>
+			<li>Block -> By default some elements are blocks. Take up the whole width of the screen. No other elements will sit next to it.</li>
+			<li>Inline -> These elements take up only as much height and width as they need to. However, you cannot change the width of these elements.</li>
+			<li>Inline-Block-> Contains the benefits as inline, allowing other elements to sit next to it, while allowing the width to be freely changed. May add some space depending on the browser. </li>
+			<li>None -> This removes the element from the website. can be used in the case that you have a quiz and want to hide the answers.</li>
+			<ul>
+				<li>Visibility:hidden -> Makes the element disappear but the element does keep it's position, and other elements still flow as if the element was visible.</li>
+			</ul>
+		</ul>
+		<p>Display does not work unless the position property is set.</p>
+		<a href="https://www.youtube.com/watch?v=jx5jmI0UlXU" target="_blank">Positioning in 9 Minutes - Supplementary Material</a>
+		
+		<h3>Position Property |<a href="https://www.w3schools.com/Css/css_positioning.asp" target="_blank"> W3Schools Reference</a></h3>
+		<p>Even without css, there are predefined rules. Content is everything. Order of elements is based on how its written in the code. Children are inside of their parents. Child objects are on top of their parents on dispaly. </p>
+		<p>We can set css property position to position things the way that we would like to. </p>
+		<ul>
+			<li>static -> All html are static by default. They follow the rules and go with the html flow.</li>
+			<li>relative -> Position the element we want relative to how it would have been positioned. If we change an element to relative, we can move an element based on whre it would have been. we change it using coordinates. We need to remember that when we move an element that has a relative position, it doesn't affect the position of any of the other elements around it. It leaves a ghost space where it used to be, basically. When we change the coordinate properties, what we do is that we are bastically giving the element a margin based on the coordinate.by irself, the position doesnt do anything. it requires the coordinates to change its position. relative to the element to where the element would have been displayed in natural html flow.  </li>
+			<li>fixed -> If a position is fixed, then the item will stay in it's current position. This item will stay fixed in it's position relative to the position. it might be useful for a header bar or a div bar for a website.</li>
+			<li>absolute -> Let's say that there is an image inside of a div. When using absolute and shifting the image to the left, it shifts relative to the parent object (div). The margin is relative to it's parent. The parent is most times the whole webspage. we add a margin to an item bassed on the edge of a parent object. This affects the flow of the html. We take the element out of the flow of the document. The object can be moved anywhere on the screen relative to it's parent. It is easier to move things around using absolute positioning relative to the body, or to the same thing. It is easier for people to think about layout this way. parent doesnt need to be the body. If there was a div inside of a div, the first div would be a parent. Anychanges made to the second div in terms of positioning would be relative to the first div.</li>
+			<li>sticky-> </li>
+		</ul>
+		<p>Centering elements using CSS.</p>
+		<ul>
+			<li>text-align -> Must be set in the parent container. Works with elements that are inline-blocks or the entire width of the box.</li>
+			<li>margin:auto -> Centers an object vertically or horizontally</li>
+			<li>If you have a parent element that centers everything, you might have objects inside that are inline blocks with set widths. These inline blocks will have to be centered by adjusting the margin.</li>
+		</ul>
+
+	</div>
+
+	<div>
+		<h3>CSS Floating</h3>
+		<p>we can make an image float to the left and have text to be the right. If we float on the image element, then the text can be on the left. If you want space between image and the text, you can add a margin right ot the image. </p>
+		<p class="tips">Can be used a lot, but should only be used for cases of wrapping the text around an element.</p>
+		<p>clear can be used to to prevent something from wrapping on the left. This can be thought of the opposite of float.</p>
+		<p>This should only be used for wrapping text around another element, and is not a free for all positioning element.</p>
+	</div>
+
+	<div>
+		<h1>Changing Fonts</h1>
+		<p>Font-family: can change all the fonts on the wbsite. monospace for coding because it makes everything easy to read.</p>
+		<p>Cursive and fantasy and low readablity and not oftem used. </p>
+		<p>serif is by default. Times and arial are defaults. </p>
+		<p>We can add specific fonts to our css. font-family: verdana, sans-serif. The font defaults to verdana, but if the system doesnt have it, sans serif is done. </p>
+		<p>Web-safe fonts. There are font familties that most sites can render safetly. no font is 100% websafe. </p>
+		<p>If we want to use a font but are unsure if everyone has it, we can use fallbacks. </p>
+		<p><a href="https://www.cssfontstack.com/" target="_blank">Font Stack for Fallbacks</a></p>
+		<p>What if we want everyone to see the exact same thing that we intended? If you want everyone to use the same font, we can use font embedding. </p>
+		<a href="https://fonts.google.com" target="_blank">Google Fonts can be used to embed a font onto a website. These are fonts that can be commercial. search and add fonts to your desire. Then after finding them, you can add them to your head element, as a link. Then, ensure that the font name is inside of your css code file. </a>
+		<p>when using css for margins, use pixels. </p>
+
+
+		<p>when doing css margins, it goes top, right, bottom, left. So, you can use </p>
+		<p>Change font color. Inside the element tag,,, </p>
+		<p>color:#hexcode</p>
+
+		<p>font weight is font-weight. This can be specified using keyword or by numbers</p>
+
+		<p>line height is line-height. can be specified with number. The perfered way is the single value without a unit. </p>
+
+	</div>
+
+	<div class="responsive">
+		<h2>Responsive Websites</h2>
+		<p>This is how the layout should change depending on the size of a screen. This might be a different view for a mobile site VS a desktop site VS a tablet site.</p>
+
+		<p>Done through a few different methods</p>
+
+		<ul>
+			<li>Media Queries -> Used instead of a selector in CSS. </li>
+			<li>CSS Grid -> We create a parentdiv that contains divs within it. In the parent div, we give it a display:grid property. Then we also set grid-template-columns and rows, and gaps. </li>
+			<li>Flexbox -> This can create 1D layouts easily. </li>
+			<li>External Frameworks-> Things such as a bootstrap framework.</li>
+		</ul>
+		
+
+		<h3>Mediaqueries |<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">MDN Reference</a></h3>
+
+		<p>Used to display a different version of chosen elements when the screen is a certain width.</p>
+		<p class="example"> @media (breakpoint){rules}</p>
+
+		<ul>
+			<li>breakpoint -> Can be used to define the screensize that elements will appear at. </li>
+			<ul>
+				<li>(max-width:value) says if the screen is less than value then change the elements </li>
+				<li>(min-width:value) says that if the screen is more than some value then change the elements.</li>
+				<p>You can also target two different sizes using the AND keyword.</p>
+				<li>(min-width) AND (max-width) says target the sizes between these two sizes</li>
+				<li>(max-width) AND (min-width) targets the sizes outside of the two spaces.</li>
+			</ul>
+			<li>screen/print -> used to target if the element is meant for a screen or print.</li>
+			<li>orientation -> sees what way the screen is oriented.</li>
+		</ul>
+		<p>Example of use</p>
+		<p class="example">
+			h1{font-size:30px;} <br>
+			<br>
+			@media (max-width:600px){ <br>
+			/*Used for sites that are <600px wide*/<br>
+			h1{font-size:20px;}
+		}
+		</p>
+
+		<p>For example, if we define a div that has a height and a width, then later define @media(breakpoint){div{new height and width}}, the div will change when the breakpoint conditions are met</p>
+
+
+
+
+		<h3>CSS Grid | <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">Read More Here</a></h3>
+		<p>1 fr is a fraction of the screen. </p>
+		<ul>
+			<li>grid-template-columns</li>
+			<li>grid-template-rows</li>
+			<li>gaps</li>
+		</ul>
+		<p>can create a complex layout very quickly, and can specify specific classes to certain parts of the layout.</p>
+
+
+		<h3>Flexbox | <a href="flexbox.html" target="_blank">Flexbox</a></h3>
+		<p>Good at displaying information on a horizontal or a vertical line.</p>
+		<p>Uses display:flex, and divides up the width depending on the flex: value. This divides height up by ratios. </p>
+
+		<h3>Bootstrap</h3>
+		<p>Divides the space up to 12 columns.</p>
+	</div>
+
+	<div>
+		<h2>Other CSS Topics</h2>
+
+		<ul>
+			<li>Favicons ->Icons that appear in a tab. Displays on websites and is a good touch. To use it, use the following in the head. link rel="icon" href="". These are ico (icon files). <a href="https://www.flaticon.com/" target="_blank">Flat Icon is full of vector gifs and images</a></li>
+			<li>Viewport -> The current window. Using a percentage to change the width of an img will change it to cover that percentage of a screen. (Ex. width =50% == the image will take up 50% of the screen.</li>
+			<li>Flipping images -> You can flip images using a transform. The format would look like so: https://www.w3schools.com/howto/howto_css_flip_image.asp </li>
+			<li>Generate CSS Buttons: <a href="https://css3buttongenerator.com/" target="_blank">Generate buttons here</a></li>
+			<li>Hoverstates -> element:hover{css info}</li>
+			<p>Video Topics</p>
+			<li><a href="https://www.youtube.com/watch?v=VQraviuwbzU" target="_blank">5 Tips to make responsive layouts</a></li>
+			<li><a href="https://www.youtube.com/watch?v=veEqYQlfNx8" target="_blank">The problem with vh/vw viewport units</a></li>
+			<li><a href="https://www.youtube.com/watch?v=TUD1AWZVgQ8" target="_blank">Top 10 css concepts you should know</li>
+		</ul>
+	</div>
+</body>
+</html>

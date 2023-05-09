@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple Bootstrap Test Site - HTMLPlaybook</title>
+
+	<!--Links-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<style>
+		.feature-icon{
+
+			width:50px;
+			height:50px;
+			border-radius:5%;
+
+			display:flex;
+			justify-content:center;
+			align-items: center;
+		}
+
+		.feature{
+			padding-bottom:20px;
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+
+	<!--Navbar-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <!--Used to put in a Logo, read about it @https://getbootstrap.com/docs/4.0/components/navbar/-->
+		<a class="navbar-brand" href="#"><img src="assets/ruinalogo.png" width="40" alt="">Library of Ruina</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+		</button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Invitations</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Receptions
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">General Receptions</a>
+	          <a class="dropdown-item" href="#">Story Receptions</a>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="May You Find Your Book In This Place" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Seek</button>
+	    </form>
+	  </div>
+	</nav>
+
+	<!--Content-->
+	<div class="px-4 pt-5 my-5 text-center border-bottom">
+	    <h1 class="display-4 fw-bold">About Library of Ruina</h1>
+	    <div class="col-lg-6 mx-auto">
+	      <p class="lead mb-4">Library of Ruina is a Deckbuilder game taking place in the Library. You play as Roland, a grade 9 fixer who has been tasked with holding receptions to collect books.</p>
+	      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+	        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Steam</button>
+	        <button type="button" class="btn btn-outline-secondary btn-lg px-4">XBox</button>
+	      </div>
+	    </div>
+	    <div class="overflow-hidden" style="max-height: 40vh;">
+	      <div class="container px-5">
+	        <img src="assets/ruinaimg.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" loading="lazy">
+	      </div>
+	    </div>
+	  </div>
+
+	 <!--Features-->
+	<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Featuring</h2>
+    <div class="row">
+      <div class="feature col-lg-4 col-sm-12">
+        <div class="feature-icon bg-primary bg-gradient">
+          <img src="assets/egg-fill.svg" width="25px" height="25px">
+        </div>
+        <h2>Hamhampangpang</h2>
+        <p>Think about sinking your teeth into some delicious HamHamPangPang while you build your deck.</p>
+        <a href="https://twitter.com/Ham_PangPang" class="icon-link">
+          Visit HamHamPangPang
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+      </div>
+      <div class="feature col-lg-4 col-sm-12">
+        <div class="feature-icon bg-primary bg-gradient">
+          <img src="assets/people-fill.svg" width="25px" height="25px">
+        </div>
+        <h2>Extensive Guestlist</h2>
+        <p>Meet a variety of characters as you invite them to the library. Backstreets or nest, they're all ready to meet you.</p>
+        <a href="#" class="icon-link">
+          Send an Invitation
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+      </div>
+      <div class="feature col-lg-4 col-sm-12">
+        <div class="feature-icon bg-primary bg-gradient">
+          <img src="assets/moon-stars-fill.svg" width="25px" height="25px">
+        </div>
+        <h2>Project Moon Type Horror</h2>
+        <p>This is a Project Moon game, so it is likely to be wrought with content warnings. Beware of character death, blood and gore</p>
+        <a href="#" class="icon-link">
+          Read Full Content Warnings
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container px-4 py-5">
+  	  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+		  <div class="carousel-indicators">
+		    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		  </div>
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img src="assets/img1.jpg" class="d-block w-100" alt="screenshot1">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="assets/img2.jpg" class="d-block w-100" alt="screenshot2">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="assets/img3.jpg" class="d-block w-100" alt="screenshot3">
+		    </div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+
+  </div>
+
+  <div class="container">
+  	<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <small class="d-block mb-3 text-muted">Produced Using Bootstrap</small>
+        <small class="d-block mb-3 text-muted">Image Assets From Bootstrap and Project Moon</small>
+        <small class="d-block mb-3 text-muted">©2023</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About Library of Ruina</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://store.steampowered.com/app/1256670/Library_Of_Ruina/">Purchase For Steam</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.xbox.com/en-us/games/store/Library-Of-Ruina/9PLD3NB588ZL">Purchase for XBox</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://twitter.com/projmoonstudio">Project Moon Twitter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Creator</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://github.com/Staartline/">Staartline GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  </div>
+
+
+
+ 
+
+	<!--JS-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
