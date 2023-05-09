@@ -12,10 +12,13 @@
 
 		div{
 			padding-left:10px;
+			border:2px solid black;
+
 		}
 
 		.header{
 			background-color:pink;
+			border: none;
 
 		}
 
@@ -33,6 +36,7 @@
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 1fr;
 			gap:10px;
+			border:none;
 		}
 	</style>
 </head>
@@ -78,22 +82,62 @@
 
 		<div>
 			<h2>Grid Sizing</h2>
+			<p>An important thing to decide is how we want to size our grid to fit our columns and rows.</p>
 			<p>Grid-template-column/grid-template-rows -> We can define rows and columns of a grid using px, rem, or fr. Using REM or PX for the grid means that the grid will not be responsive. Using fr fits the grid to the screen.</p>
 			<p>Grid-template: rows/columns -> We may also define both the rows and the columns of a grid using grid-template: rows / columns</p>
 			
 
-			<p>Auto -> We may also define rows and columns using the auto keyword. Columns will respond to the width of the screen. Rows will respond to the height of the content. </p>
+			<p>Auto -> We may also define rows and columns using the auto keyword. Columns will respond to the width of the screen (attempts to go to 100%). Rows will respond to the height of the content. </p>
 			<p>fr -> used to divide the grid into ratios. if someone wrote 1fr 2 fr, the ratio of the columns would be 1:2. This grows and shrinks depending on the screensize, and the content width.</p>
-			<p>minmax(min,max) -> used to define the min and max width that we want a column to be. </p>
+			<p>minmax(min,max) -> used to define the min and max width that we want a column to be. Setting a min size means that this is as small as the column will get.</p>
 			<p>repeat(times, size) -> used when we want to repeat something. We want to define repetition easily.  </p>
 			<p>items are laid out in a F layout. Anything that is added after we have defined our rows and columns, then css will try to adjust for the new item </p>
-			<p>grid-auto-rows -> when we create new rows, then this defines how new items are added to a grid.  </p>
+			<p>grid-auto-rows -> when we create new rows, then this defines how new items are added to a grid.</p>
 
 			<p>We can use chrome developer tools to find out what is happening in our grid.</p>
+			<p>When opening the inspector on firefox, if you use the layout tab, it will allow you to see if css grid is in use. </p>
+			<p>Sizing test: <a href="https://appbrewery.github.io/grid-sizing/test.html" target="_blank"> Take Here</a></p>
+			<p>
+				.grid-container {
+display:grid;
+grid-template-columns:auto 400px minmax(200px, 500px);
+grid-template-rows:1fr 1fr 2fr;
+grid-auto-rows:50px;
+} 
+			</p>
 		</div>
 
 		<div>
 			<h2>Grid Placement</h2>
+			<h3>Terms</h3>
+
+			<h3>Positioning along a column</h3>
+			<p>container/grid container -> Contains items. </p>
+			<p>griditems/ -> </p>
+			<p>tracks -> These are rows and columns that we make with grid-template-rows/columns</p>
+			<p>tracks form grid cells. Multiple cells can make a grid item.</p>
+			<p>Tracks are separeted by gridlines/gap</p>
+			<p>by default, items are laid out to unoccupied cells. One per cell.</p>
+
+			<p>grid-column -> grid-column:value ex grid-column:span 2 will make an item span two columns</p>
+			<p>grid-column-start:start</p>
+			<p>grid-column-end:ending -> if you specify a negative value , (-1), the rows are on the righthand most side. </p>
+			<p>We can start and end in whichever position we would like. </p>
+			<p>grid-column is short for grid-column-start and grid-column-end</p>
+			<p>grid-row -> grid-row-start/ grid-row-end</p>
+
+			<p>order -> each item has an order of 0 by default. By ordering the items, the greater they are, the farther into the grid they go. </p>
+			<p>grid-area: grid-row-start/grid-column-start/grid-row-end/grid-column-end -> If we use this on an item, if we want the rest of the layout to act as expected, we need to lay out all the areas using the same property</p>
+			<h3>Grid Rows</h3>
+
+			<h3>Overlaying items</h3>
+			<p>We may overlay items atop another on grid. </p>
+
+		</div>
+
+		<div>
+			<h2>Project</h2>
+			<p>Create a mondrian composition</p>
 		</div>
 
 		<div>
@@ -102,6 +146,7 @@
 				<li><a href="https://youtu.be/9zBsdzdE4sM" target="_blank">Learn CSS Grid in 20 Minutes - Web Dev Simplified</a></li>
 				<li><a href="https://www.youtube.com/watch?v=rg7Fvvl3taU" target="_blank">Learn CSS Grid the Easy Way - Kevin Powell</a></li>
 				<p>You can have an easier time to visualize the number of rows and columns that you need inside of a container by drawing the prefered layout, then drawing the different boxes that you will need.</p>
+				<li><a href="https://cssgridgarden.com/" target="_blank">Grid Garden</a></li>
 			</ul>
 		</div>
 
