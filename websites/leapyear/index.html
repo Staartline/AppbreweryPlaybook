@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Leap Year</title>
+</head>
+<body>
+	<h1>Leap Year</h1>
+
+	<p>By the way, the notes for displaying a JS variable on screen can be found here: <a href="https://sebhastian.com/display-javascript-variable-html/" target="_blank">Link here</a></p>
+
+	<p>Leap Year : <span id="years">Years</span></p>
+
+	<script>
+
+			var lyears = "pog";
+
+			document.getElementById("years").innerHTML = lyears;
+
+			function leapYear(year){
+				//If divisible by 4, leap year
+				if(year%4 == 0){
+					
+					//if year is divisible by 400, is leap year
+					if(year%400 == 0){
+						return "Leap year.";
+					}
+
+					if(year%100 != 0){
+						return "Leap year.";
+					}
+					else{
+						return "Not leap year.";
+					}
+				}
+				//If not divisible by 4, not leap year
+				else{
+					return "Not leap year.";
+				}
+
+			}
+
+
+	</script>
+
+</body>
+</html>

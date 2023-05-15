@@ -1,0 +1,45 @@
+.container{
+	display:grid;
+	width:100%;
+	gap:10px;
+	grid-template-columns: 1fr 1fr;
+
+	grid-template-areas:"links links" "html css" "design js";
+
+
+
+}
+
+.item{
+	min-width: 300px;
+	min-height:300px;
+	border:1px solid black;
+	padding:0px 5px;
+}
+
+.links{
+	grid-area:links;
+}
+
+.html{
+	grid-area:html;
+}
+
+.css{
+	grid-area:css;
+}
+
+.design{
+	grid-area:design;
+}
+
+.js{
+	grid-area:js;
+}
+
+@media(max-width:600px){
+	.container{
+		display:flex;
+		flex-direction: column;
+	}
+}
