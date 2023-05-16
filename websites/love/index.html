@@ -4,28 +4,61 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Love Calculator</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h1>Love Alert!</h1>
-	<p>This page takes two inputs, and then will calculate your love score as a percentage.</p>
+	<div class="container">
+		<div class="intro">
+			<h1>Love Alert!</h1>
+			<p>Type the name of you and your beloved below, and we'll do our best to calculate your LOVE score!</p>
+		</div>
+
+		<div class="form">
+			<form class="name-form">
+				<label for="name1">Name:</label>
+				<input type="text" name="name1"></form>
+				<label for="name2">Name:</label>
+				<input type="text" name="name2"></body><br>
+				<button type="submit" value="Submit" onclick="calcLove();">Submit here!</button>
+			</form>				
+		</div>
+		<div class="results">
+			<p class="result">Results</p>
+			<p id="percentage">%</p>
+			<p id="result">Your results are...</p>
+		</div>
+
+
+	</div>
+
+
+
+
 
 	<script>
-		var name1 = prompt("Your Name");
-		var name2 = prompt("Lover's Name");
 
-		var rng = Math.random();
-		rng = Math.floor(rng * 100) + 1;
+		function calcLove(){
+			var rng = Math.random();
+			rng = Math.floor(rng * 100) + 1;
 
-		alert("Your compatability is " + rng + "%");
-		if (rng > 70){
-			alert("get married");
+			document.getElementById("percentage").innerHTML = rng;
+
+			if ((rng <= 100) && (rng >= 70)){
+				document.getElementById("result").innerHTML = "Get Married";
+			}
+			if((rng >= 30) && (rng <= 69)){
+				document.getElementById("result").innerHTML = "Talk First";
+			}
+			if(rng < 29){
+				document.getElementById("result").innerHTML = "Forgeddabout it";
+			}
 		}
-		if ((rng > 30) && (rng < 69)){
-			alert("talk first");
-		}
-		else{
-			alert("no marry?");
-		}
+		
+
 	</script>
 </body>
 </html>

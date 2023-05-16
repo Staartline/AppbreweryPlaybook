@@ -1,0 +1,25 @@
+body{
+	/*Some nuetral color*/
+	text-align: center;
+	font-family: 'Kanit', sans-serif;
+}
+.container{
+	display: inline-grid;
+	gap:10px;
+	background-color: pink;
+	border-radius: 30px;
+	min-width: 45%;
+	min-height:50%;
+}
+
+.form{
+}
+
+.results{
+}
+.result{
+	font-size: 2rem;
+}
+.percentage{
+	font-size: 3rem;
+}
