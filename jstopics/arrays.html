@@ -10,7 +10,97 @@
 	<div>
 		<p>We can use an array to store items in a list.</p>
 		<p>Features</p>
-		<p></p>
+		<ul>
+			<li>Collection of related items stored in the same container</li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		array[1] will return the item at index 1. 
+
+
+		declare -> var arrayname =[item, item, item]
+
+		arrayname.includes(someitem) can be used to find out if an item is in the array. returns true or false. 
+		push adds a new item. arrayname.push(value). pushes the value to the end of the array. 
+		Pop pops item off the end of an array. 
 	</div>
+
+	<div>
+		<p>Intermediate Arrays</p>
+		<ul>
+			<li>array.pop(value) -> removes the value at the end of the array</li>
+			<li>array.push(value) - > adds the value at the end of the array </li>
+		</ul>
+		<p>Adding Elements</p>
+		<p>Fizz Buzz</p>
+		<p>Keep an index.</p>
+		<p>If number % 3 = 0, fizz. If number % 5 = 0 , buzz. If number %3 ==0 && number %5 ==0, fizz buzz. Index ++ </p>
+		<p>Check console for output here. </p>
+		<button onclick="javascript:FizzBuzz();">Click here to Run Fizzbuzz Lol</button>
+		<p id="fizzbuzzresult">display here</p>
+
+
+		<button onclick="javascript:whosPaying();">Click here to who's Paying Lol</button>
+		<p id="namesresults">display here</p>
+	</div>
+
+	<script>
+
+		function GuestList(){
+
+			var yourname = prompt("What is your name");
+
+			var guestList = ["Todd", "Susie", "Gina"];
+
+			if(guestList.includes(yourname)){
+				return "invited";
+			}
+			else{
+				return "nexttime";
+			}
+		}
+
+		function FizzBuzz(){
+			var numbers = [];
+
+			var currentNum = 1;
+
+			while(numbers.length < 100){
+
+				if((currentNum%3 == 0) && (currentNum%5 ==0)){
+					numbers.push("FizzBuzz");
+				}
+				else if(currentNum%3 == 0){
+					numbers.push("Fizz");
+				}
+				else if(currentNum%5 ==0){
+					numbers.push("Buzz");
+				}
+				else{
+					numbers.push(currentNum);
+				}
+
+				currentNum++;
+			}
+
+			document.getElementById("fizzbuzzresult").innerHTML = numbers.join(", ");
+		}
+
+		
+		function whosPaying() {
+		    
+		    //Write your code here.
+		    var names = ["Yi Sang", "Faust", "DonDon", "Ryoshu", "Meursalt", "Hong Lu", "Heathcliff", "Fishmael", "Rodya", "Dante", "Sinclair", "Outis", "Gregor"];
+		    
+		    var index = Math.floor(Math.random() * names.length);
+
+
+		    document.getElementById("namesresults").innerHTML = names[index] + " is going to buy lunch today!";;
+
+		}
+
+	</script>
 </body>
 </html>
