@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Loops</h1>
+	<div>
+		<p>We use loops when we want to repeat some code or activity for some certain amount of times, or under certain conditions. </p>
+		<h2>While Loops</h2>
+		<p>Does a thing while the condition is true</p>
+
+		<p>While (condition){
+			some code;
+		}</p>
+
+		Stops when the code is done 
+
+		continue - > stops the current loop, and starts the next loop
+		break - > stops the loop 
+
+		Issues: If you forget to increment, then the win condition to stop loop creates an infinite loop
+	</div>
+
+	<button onclick="javascript:beer(20);">Click here to run beer function</button>
+	<p id="displayresult">check output in console</p>
+	<script>
+		function beer(bottles){
+			var bottlesCount = bottles;
+
+			var bottlesLyrics = [];
+
+			while(bottlesCount > 0){
+				if(bottlesCount == 1){
+					bottlesLyrics.push("1 bottle of beer on the wall, 1 bottle of beer. <br> If that 1 bottle should happen to fall, what a waste of alcohol!<br>");
+					bottlesCount--;
+					break;
+					//one bottle of beer on the wall
+				}
+				var bottlesRemain = bottlesCount - 1;
+				bottlesLyrics.push(bottlesCount + " bottles of beer on the wall, " + bottlesCount + " bottles of beer,<br> take one down, pass it around, " + bottlesRemain + " bottles of beer on the wall. <br>");
+				bottlesCount--;
+			}
+			//No more bottles of beer on the wall
+			bottlesLyrics.push("No more bottles of beer on the wall, no more bottles of beer.<br>There's nothing else to fall, because there's no more bottles of beer on the wall. ");
+
+			document.getElementById("displayresult").innerHTML = bottlesLyrics.join(" <br>");
+		}
+	</script>
+
+</body>
+
+</html>
