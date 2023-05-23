@@ -6,43 +6,41 @@
 	<title>Arrays</title>
 </head>
 <body>
-	<h1>Arrays</h1>
+	<h1>Arrays | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN</a></h1>
 	<div>
-		<p>We can use an array to store items in a list.</p>
-		<p>Features</p>
+		<p>We can arrange items inside of an array.</p>
+		<p>Declare an array using -> var arrayname =[item, item, item];</p>
+		<p>Call an item -> arrayname[index] will return the item at location index.</p>
+
 		<ul>
-			<li>Collection of related items stored in the same container</li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li>Collection of related items stored in the same container. Unlike Java, JS arrays can consist of items with different datatypes.</li>
+			<li>0 Indexed. Arrays store item beginning at location 0. </li>
 		</ul>
 
-		array[1] will return the item at index 1. 
+		
+		<h3>Methods</h3>
 
-
-		declare -> var arrayname =[item, item, item]
-
-		arrayname.includes(someitem) can be used to find out if an item is in the array. returns true or false. 
-		push adds a new item. arrayname.push(value). pushes the value to the end of the array. 
-		Pop pops item off the end of an array. 
+		<ul>
+			<li>arrayname.includes(item) -> can be used to find out if some item is inside of an array. Returns true or false.</li>
+			<li>arrayname.push(value) -> adds the value at the end of the array</li>
+			<li>arrayname.pop(item) -> removes the value at the end of the array</li>
+		</ul>
 	</div>
 
 	<div>
-		<p>Intermediate Arrays</p>
-		<ul>
-			<li>array.pop(value) -> removes the value at the end of the array</li>
-			<li>array.push(value) - > adds the value at the end of the array </li>
-		</ul>
-		<p>Adding Elements</p>
-		<p>Fizz Buzz</p>
+
+		<h2>Practice Problems!</h2>
+		<h3>Fizz Buzz</h3>
+		<p>Fizz Buzz is a program that starts counting from 1. For multiple of 3, fizz is said. For multiples of 5, buzz. If this number is a multiple of 3 and 5, fizzbuzz is said.</p>
+		<h3>My logic below</h3>
 		<p>Keep an index.</p>
-		<p>If number % 3 = 0, fizz. If number % 5 = 0 , buzz. If number %3 ==0 && number %5 ==0, fizz buzz. Index ++ </p>
-		<p>Check console for output here. </p>
-		<button onclick="javascript:FizzBuzz();">Click here to Run Fizzbuzz Lol</button>
+		<p>If number % 3 = 0, fizz. If number % 5 = 0 , buzz. If number %3 ==0 && number %5 ==0, fizz buzz. Index++ </p>
+		<button onclick="javascript:FizzBuzz();">Click here to Run Fizzbuzz</button>
 		<p id="fizzbuzzresult">display here</p>
 
-
-		<button onclick="javascript:whosPaying();">Click here to who's Paying Lol</button>
+		<h3>Practice Problem! Who's Paying</h3>
+		<p>Create a program to see who's buying lunch for the Limbus Company Sinners today.</p>
+		<button onclick="javascript:whosPaying();">Click here to who's Paying</button>
 		<p id="namesresults">display here</p>
 	</div>
 
@@ -87,7 +85,6 @@
 
 			document.getElementById("fizzbuzzresult").innerHTML = numbers.join(", ");
 		}
-
 		
 		function whosPaying() {
 		    
