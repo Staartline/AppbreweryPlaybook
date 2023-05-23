@@ -1,0 +1,46 @@
+body{
+	text-align: center;
+	background-color:floralwhite;
+	color:indianred;
+	font-family: 'Rubik', sans-serif;
+}
+
+
+.flex-container{
+	display:inline-flex;
+	justify-content: center;
+	justify-items: center;
+	min-height: 200px;
+	gap:10px;
+	border:5px solid indianred;
+	border-radius: 30px;
+
+}
+
+.span-2{
+	grid-column:span2;
+}
+
+h1{
+	font-size:5rem;
+}
+
+h2{}
+
+button{
+	margin:10px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius:30px;
+	border-color:indianred;
+	font-size:2rem;
+	background-color:indianred;
+	color:floralwhite;
+
+}
+
+img{
+	width:50%;
+}
