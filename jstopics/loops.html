@@ -7,44 +7,48 @@
 </head>
 <body>
 	<h1>Loops</h1>
+	<p>We use loops when we want to repeat some code or activity for some certain amount of times, or under some certain condition. </p>
+	<p>Use while loops when checking for a state, and use for loops when you know how many times you want to run a loop.</p>
+
 	<div>
-		<p>We use loops when we want to repeat some code or activity for some certain amount of times, or under certain conditions. </p>
 		<h2>While Loops</h2>
-		<p>Does a thing while the condition is true</p>
+		<p>Runs while a condition is true, and stops when the condition is false.</p>
+		<p>Issues: If you forget to increment the condition, then the code continues to run, creating an infinite loop</p>
+		
+		<p>while(condition){ <br>
+			some code;<br>
+			incrementcondition;<br>
+		}<br></p>
 
-		<p>While (condition){
-			some code;
-		}</p>
-
-		Stops when the code is done 
-
-		continue - > stops the current loop, and starts the next loop
-		break - > stops the loop 
-
-		Issues: If you forget to increment, then the win condition to stop loop creates an infinite loop
-
-		<p>Beer Bottle Lyrics.</p>
-		<p>In this case, I would want to separate each line with a \n newline character, but have opted to use < br> instead as to separate the lines when displayed in html</p>
+		<h3>Loop Controls</h3>
+		<ul>
+			<li>continue - > stops the current loop, and starts the next loop</li>
+			<li>break - > stops the loop </li>
+		</ul>
+		
+		<h3>Beer Bottle Lyrics</h3>
+		<p>The lyrics to 99 Bottles of beer can be used to create a function that counts down from some given number.</p>
+		<p>Note! In this case, if I were publishing these lyrics to a text file, I would use a \n newline character, but have opted to use < br> instead as to separate the lines when displayed in html.</p>
+		<button onclick="javascript:beer(20);">Click here to run (Test case is 20)</button>
+		<p id="displayresult">check output in console, or right here.</p>
+	
 	</div>
 
-	<button onclick="javascript:beer(20);">Click here to run beer function</button>
-	<p id="displayresult">check output in console</p>
-
-
 	<div>
-		<h2>For Loop</h2>
-		<p>Defines a loop that starts, ends, and has some change. Used for when we want to do something for some number of times. </p>
-		<p>for(start; end; increment){some code}</p>
-		<p>Can count in any direction and use different increments.</p>
-		<p>Use while when checking for a state, and use for when you know how many times you want to run a loop.</p>
-
-		<p>Fibo Code Challenge</p>
-		<p>Take two numbers, and every number after that adds the next two numbers. First two numbers are [0, 1] </p>
-		<p>Bonus reading on finding the last elements of an array <a href="https://www.freecodecamp.org/news/how-to-get-the-last-item-in-an-array-in-javascript/" target="_blank">read about it here.</a></p>
-		<button onclick="javascript:fibbo(10);">press here to run</button>
+		<h2>For Loops</h2>
+		<p>Creates a loop that starts, ends, and has some change. Used for when we want to do something for some number of times that we know.</p>
+		<p>for(start; end; increment){somecode;}</p>
+		<p>The increment increases at the end of the current iteration of the loop.</p>
+		<p>It is possible to count in either direction, and use different increments as well.</p>
+		<p>Note! If you start counting from 0, your stop condition will be x < stop. If you start counting from 1, your stop condition will be x <= stop.</p>
+		
+		<h3>Fibo Code Challenge</h3>
+		<p>Take two numbers, and every number after that adds the previous two numbers in the sequence. First two numbers are [0, 1] </p>
+		<p>Bonus reading on finding the last elements of an array -> <a href="https://www.freecodecamp.org/news/how-to-get-the-last-item-in-an-array-in-javascript/" target="_blank">read about it here.</a></p>
+		<button onclick="javascript:fibbo(10);">press here to run (Test case is 10)</button>
 		<p id="f2">Results for fibbo here</p>
 
-		<p>Note! If you start counting from 0, your stop condition will be x < stop. If you start counting from 1, your stop condition will be x <= stop.</p>
+		
 
 	</div>
 	<script>
