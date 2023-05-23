@@ -3,39 +3,45 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Conditionals</title>
+	<title>Conditionals - Is it this, or that?</title>
 </head>
 <body>
+	<h1>Conditionals | <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" target="_blank">MDN</a></h1>
 	<div>
-		If else.
-			Conditionals.
-			if (condition){} -> does this code
-			else{} -> does some othr thing. 
+		<h2>If, else if, Else</h2>
+		<p>This block is used when some condition is met. If the first condition is not met, check the second condition. If the second condition is not met, then move on. If no conditions are met, then do the code in the else block.</p>
+		<p>if (condition){somecode;} -> does this code </p>
+		<p>if else(condition){somecode;} -> if the condition is met, do this code</p>
+		<p>else{} -> does some other thing. </p>
+			
+		<p>In short, if the first statement is not true, then the second condition is checked (we can use an else if). We can use this to control the flow of our code.</p>
+	</div>
 
-		If the first statement is not true, then the second code runs. You can even have an elseif. We use this to control a flow of code. 
+	<div>
+		<h2>Comparators</h2>
+		<p>These are used to check the condition of some variable a against some variable b (ex. a > b, a === b, a <= b).</p>
+		<ul>
+			<li> === -> Equal to (Also checks datatypes)</li>
+			<li> == -> Equal to (does not check datatype)</li>
+			<li> !== -> Not equal to</li>
+			<li> > Greater than </li>
+			<li> < less than</li>
+			<li> >= -> Greater than or equal to</li>
+			<li> <= -> Less than or equal to</li>
+		</ul>
 
-		equality === 
-		</div>
-		<div>
-			<h2>Comparitors</h2>
-			<ul>
-				<li>=== -> Equal to (checks datatypes)</li>
-				<li>!== -> Not equal to</li>
-				<li> > Greater than </li>
-				<li> < less than</li>
-				<li> >=</li>
-				<li> <=</li>
-				<li> == equal to (does not check datatype) </li>
-			</ul>
+		<p>It is also possible to combine these comparators</p>
+		<ul>
+			<li>&& -> AND Checks for both conditions to be true</li>
+			<li>|| -> OR Checks for one of the conditions to be true</li>
+			<li>! -> NOT Checks for the condition to not be true</li>
+		</ul>
+	</div>
+	<div>
+		<h2>Leap Year Coding Challenge</h2>
+		<a href="../websites/leapyear/index.html" target="_blank">View Page Here</a>
+		<p>It is recommended that anyone working through something with many conditions to use a flowchart to help with the logic behind the problems.</p>
 
-			<p>We can even fine tune this and combine them. </p>
-			&& is and checks both
-			|| is or checks for either
-			! not
-		</div>
-
-		<div>Leap year coding challenge</div>
-		<div>Use a flowchart to come up with the logic for your flow control.</div>
-
+	</div>
 </body>
 </html>
