@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document Object Model - DOM</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<h1>Document Object Model</h1>
+	<div>
+		We can add javascript to our websites by using DOM. 
+
+		We can incorperate JS into our page using inline JS (onload). This happens inside of our html element. onload(''); will use single quotes. Not modular. Hard to debug, not good in general.
+
+		Script - > use script tags. It will carry out the JS inside of the tags. 
+
+		External source. script src ="filepath" This means that we can put js into our files and then it will run. 
+
+		We want to put our JS near the bottom of the body page. This is so that we can change elements and define all of them first. After defining all the elements, we can then run our code on it. This is because HTML reads the page from top down. If an element doesn't exist, then values will be null.
+
+		Best practice is to put the code at the bottom. This lets all the content put the information on screen first, and also helps give an illusion of a faster runtime. 
+
+
+	</div>
+
+	<div>
+		To make websites interactive, we use a DOM/ This turns the page into objects that can be selected and manipulated. 
+		Each element and data is turned into a tree with objects that we can select, and their relations are mapped out. 
+	</div>
+
+	<div>Structure
+
+		document. -> The whole html file
+		document.firstelementchild.firstelementchild ->	html, head. 
+		You can select items in this manner. you can manipulate them by setting them equal to a variable, and then change the variable using variable.innerHTML = some new value. 
+
+		document.querySelector("element").click() Does something to some element when it is clicked.
+
+
+		getters and setters
+
+		we can get a property, and set a property
+		getters can get a property
+		Setters set a property using an = sign., 
+
+		car.drive(); calls a method on our object. 
+
+		Methods are things that objects can do (associated with an object.)
+	</div>
+
+	<div>
+		
+		QuerySelector 
+		get element by tag name , searches for elements with tag names such as LI or UL. Returns an array of the items. selects all of the elements with the tag name. 
+		we can select the items in the array using getelementsbytagname(element)[index]
+
+		get elements by class name selects elementss by the name of the class. 
+
+		getelementbyid. This gets a single item. All ids are unique, so this retrieves a single item. 
+
+		queryselector also works to return a single item. However, this returns a single selector, but this can be something like return .class, element. Can select elements, classes, or ids.
+		we can also combine selectors. li.item, for example. 
+
+		selectors matching more than one object? we get back the first item in the document that matches the selector. 
+
+		queryselectorall has a list of all the items that have the selector, but you will have to specify their index. 
+
+		Quiery selector and squery selector all are very specific. 
+
+		It depends on a case by case basis. 
+	</div>
+
+	<div>
+		Separate Concerns - changing appearance using JS
+		HTML is content only. CSS is there for styling. All styles should be in css. js is for behavior. 
+
+		Class list is a property of every dom object. if we query a buttonn and tap into it's class list, we can see the classes. After we know classes, we can add a class or change the method. if we can create styles on the stylesheet that we can later add to the element. 
+
+		classList.add()
+		classList.remove()
+		classList.toggle() -> Toggles a class
+
+	</div>
+
+	<div>
+		Manipulating styles using DOM
+		all css properties can be changed using JS. 
+		however, js uses camelcase so it looks different than css.
+		<a href="https://www.w3schools.com/jsref/dom_obj_style.asp" target="_blank">W3Schools Resource</a>
+
+		VAlues that we set them to must be represented as a string.This includes numbers or colors. 
+
+	</div>
+
+	<div>
+		<h2>Text Manipulation</h2>
+		textContent -> Does not return any tags that you have inside some elements. innerHTML adds tags. textContent does not. 
+	</div>
+	
+	<div>Manipulate Attributes
+		everything that is inside of an html tag is an attribute. 
+
+	</div>
+
+	<ul>
+		<li>inner HTML -> Very useful property that I have previously used. can be used to replace an element's text. <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">REad More here</a></li>
+	</ul>
+
+
+
+	<ul>
+		<li><a href="https://addons.mozilla.org/en-US/firefox/addon/dom-treemap/" target="_blank">DOM Tree Extension Firefox</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">MDN Resource</a></li>
+		<li><a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank">W3Schools</a></li>
+
+		<li><a href="https://www.w3schools.com/jsref/prop_style_color.asp" target="_blank">Styling a Color using DOM </a></li>
+	</ul>
+</body>
+</html>
