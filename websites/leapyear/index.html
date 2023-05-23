@@ -3,20 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Leap Year</title>
+	<title>Leap Year - I'd hop over it</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<h1>Leap Year</h1>
+	
+	<div class="main">
+		<h1>Leap Year</h1>
+		<p>Leap Year : <span id="years">Years</span></p>
+		<input type="number" name="yr" id="yr">
+		<button onclick="javascript:leapYear(document.getElementById('yr').value);">Is it a Leap Year?</button>
 
-	<p>By the way, the notes for displaying a JS variable on screen can be found here: <a href="https://sebhastian.com/display-javascript-variable-html/" target="_blank">Link here</a></p>
+	</div>
 
-	<p>Leap Year : <span id="years">Years</span></p>
+	
+
+
+	<h2>Resources used to assist in coding can be found below</h2>
+	<ul>
+		<li><a href="https://stackoverflow.com/questions/21397743/passing-html-input-value-as-a-javascript-function-parameter" target="_blank">Using an HTML input as a variable value</a></li>
+		<li><a href="https://sebhastian.com/display-javascript-variable-html/" target="_blank">Display a JS variable</a></li>
+	</ul>
+
 
 	<script>
 
-			var lyears = "pog";
-
-			document.getElementById("years").innerHTML = lyears;
+			
 
 			function leapYear(year){
 				//If divisible by 4, leap year
@@ -24,18 +36,22 @@
 					
 					//if year is divisible by 400, is leap year
 					if(year%400 == 0){
+						document.getElementById("years").innerHTML = "Leap Year.";
 						return "Leap year.";
 					}
 
 					if(year%100 != 0){
+						document.getElementById("years").innerHTML = "Leap Year.";
 						return "Leap year.";
 					}
 					else{
+						document.getElementById("years").innerHTML = "Not a Leap Year.";
 						return "Not leap year.";
 					}
 				}
 				//If not divisible by 4, not leap year
 				else{
+					document.getElementById("years").innerHTML = "Not a Leap Year.";
 					return "Not leap year.";
 				}
 
