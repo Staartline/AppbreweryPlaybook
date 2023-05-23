@@ -9,121 +9,115 @@
 <body>
 	<h1>Document Object Model</h1>
 	<div>
-		We can add javascript to our websites by using DOM. 
+		<p>We can add JS to our websites using DOM. This will turn an HTML document into objects that can be selected and manipulated.</p>
+		<p>Each element and data is turned into a tree with objects that we can select, and their relations(parents, siblings, and children) are mapped out.</p>
 
-		We can incorperate JS into our page using inline JS (onload). This happens inside of our html element. onload(''); will use single quotes. Not modular. Hard to debug, not good in general.
+		<p>To incorperate JS into our page, we have several options.</p>
 
-		Script - > use script tags. It will carry out the JS inside of the tags. 
+		<h3>inline JS (onload='js;')</h3>
+		<p>Inline JS is like inline css. We add an onload attribute to our html elements.</p>
+		<p>We are required to use '' single quotes when using onload.</p>
+		<p>Difficult to use since it is not modular, and may be difficult to debug.</p>
 
-		External source. script src ="filepath" This means that we can put js into our files and then it will run. 
+		<h3>Script</h3>
+		<p>We are able to use a script tag. This will carry out the JS written inside of the tags.</p>
 
-		We want to put our JS near the bottom of the body page. This is so that we can change elements and define all of them first. After defining all the elements, we can then run our code on it. This is because HTML reads the page from top down. If an element doesn't exist, then values will be null.
+		<h3>External JS</h3>
+		<p>When using a script tag, use a src="jsfilepath", and separate the JS into it's own file.</p>
 
-		Best practice is to put the code at the bottom. This lets all the content put the information on screen first, and also helps give an illusion of a faster runtime. 
-
+		<p>When we implement our JS, we want to implement this at the bottom of our body element. This is so that all of our elements are predefined and exist before the js tries to modify them (data is read from top to bottom). This is also beneficial as it ensures that our content is loaded for the page's viewers(illusion of a faster runtime).</p>
 
 	</div>
-
 	<div>
-		To make websites interactive, we use a DOM/ This turns the page into objects that can be selected and manipulated. 
-		Each element and data is turned into a tree with objects that we can select, and their relations are mapped out. 
-	</div>
+		<h2>Structure</h2>
 
-	<div>Structure
+		<p>The DOM model uses the document keyword.</p>
 
-		document. -> The whole html file
-		document.firstelementchild.firstelementchild ->	html, head. 
-		You can select items in this manner. you can manipulate them by setting them equal to a variable, and then change the variable using variable.innerHTML = some new value. 
-
-		document.querySelector("element").click() Does something to some element when it is clicked.
-
-
-		getters and setters
-
-		we can get a property, and set a property
-		getters can get a property
-		Setters set a property using an = sign., 
-
-		car.drive(); calls a method on our object. 
-
-		Methods are things that objects can do (associated with an object.)
-	</div>
-
-	<div>
+		<p>document. -> The whole HTML File</p>
+		<p>document.firstElementChild.firstElementChild -> Will select the HTML's document's first child element, and that element's first child element (HTML -> head). </p>
+		<p>Using the DOM model means that we can select different items using this structure, and manipulate them to do something. We are even able to set variables equal to this element, which we can later manipulate (variable.innerHTML = some new value)</p>
+		<p>document.querySelector("element").click() -> Does something to some element when it is clicked.</p>
 		
-		QuerySelector 
-		get element by tag name , searches for elements with tag names such as LI or UL. Returns an array of the items. selects all of the elements with the tag name. 
-		we can select the items in the array using getelementsbytagname(element)[index]
 
-		get elements by class name selects elementss by the name of the class. 
+		<h3>Getters and Setters</h3>
+		<p>Getters -> get some property</p>
+		<p>Setters -> sets a property using a = sign.</p>
+		<p>Methods -> car.drive(); invokes a method on our object. Methods are things that an object can do, so they are associated with objects</p>
+	</div>
 
-		getelementbyid. This gets a single item. All ids are unique, so this retrieves a single item. 
+	<div>
+		<h2>QuerySelector | <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank">MDN Reference</a></h2>
+		
+		<p>This will get an element by a tag name, such as an li or a ul.</p>
+		<p>Returns an array of items that has all of the elements with the tag, so to retrieve an item, you must use an index.</p>
+		<p>getElementsByTagName("tag")[index]</p> 
+		
 
-		queryselector also works to return a single item. However, this returns a single selector, but this can be something like return .class, element. Can select elements, classes, or ids.
-		we can also combine selectors. li.item, for example. 
+		<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName" target="_blank">MDN</a>
+		<p>getElementsByClassName("class")</p>
+		<p>This will get all of the elements with the name of the class.</p>
+		
 
-		selectors matching more than one object? we get back the first item in the document that matches the selector. 
+		<p>getElementById("id")</p>
+		<p>This will get a single item. Since all ids are unique, it will retrieve a single item.</p>
 
+		<p>querySelector(".class, tag, #id")</p>
+		<p>Query Selectors may be used to return single items by using combinations of selectors(elements, classes, ids) such as (.class element), or (id) or (.class .class), or (li.item).</p>
+		<p>If selectors match more than one object, the first item that matches is returned.</p>
+
+		<p>querySelectorAll() | <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll" target="_blank">MDN</a></p>
+		<p>This returns a list of all the items that has the selector, but we will also need to specify an index.</p>
 		queryselectorall has a list of all the items that have the selector, but you will have to specify their index. 
 
-		Quiery selector and squery selector all are very specific. 
-
-		It depends on a case by case basis. 
+		<p>All of the following may be used on a caes by case basis.</p>
 	</div>
 
 	<div>
-		Separate Concerns - changing appearance using JS
-		HTML is content only. CSS is there for styling. All styles should be in css. js is for behavior. 
+		<h2>Separation of Concerns</h2>
+		<p>HTML -> Used for a page's content</p>
+		<p>CSS -> Used for a page's appearance</p>
+		<p>JS -> Used for a page's behavior</p>
 
-		Class list is a property of every dom object. if we query a buttonn and tap into it's class list, we can see the classes. After we know classes, we can add a class or change the method. if we can create styles on the stylesheet that we can later add to the element. 
-
-		classList.add()
-		classList.remove()
-		classList.toggle() -> Toggles a class
-
+		<p>We want to ensure that our files are separated out in this way.</p>
+		<p>We can use a classList to make changes to our website's appearance, to help separate css appearance from the behavior. For example, if we query a button and look at its classList, we can see its classes. In this way, we can add a class or change something about this element. This way, we can create separate styles on the stylesheet that we can later add to the element. </p>
+	
+		<p>The classList is a property of every DOM object</p>
+		<ul>
+			<li>classList.add()</li>
+			<li>classList.remove()</li>
+			<li>classList.toggle() -> Toggles a class</li>
+		</ul>	
 	</div>
 
 	<div>
-		Manipulating styles using DOM
-		all css properties can be changed using JS. 
-		however, js uses camelcase so it looks different than css.
-		<a href="https://www.w3schools.com/jsref/dom_obj_style.asp" target="_blank">W3Schools Resource</a>
-
-		VAlues that we set them to must be represented as a string.This includes numbers or colors. 
-
+		<h2>Manipulating Styles using DOM | <a href="https://www.w3schools.com/jsref/dom_obj_style.asp" target="_blank">W3Schools Resource</a></h2>
+		<p>All CSS properties can be changed using JS.</p>
+		<p>JS does use camelcase, so the different properties's names may look different from css.</p>
+		<p>All values that we want to set must be represented by using a string. This includes numbers and colors.</p>
 	</div>
 
 	<div>
 		<h2>Text Manipulation</h2>
-		textContent -> Does not return any tags that you have inside some elements. innerHTML adds tags. textContent does not. 
+		<p>textContent -> Does not return any tags that you have inside some elements. innerHTML adds tags. textContent does not. </p>
+		<p>inner HTML -> Very useful property that I have previously used. can be used to replace an element's text. <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">REad More here</a></p>
 	</div>
 	
-	<div>Manipulate Attributes
-		everything that is inside of an html tag is an attribute.
-
-		You can find out which attributes are on an element by using document.queryselector.attributes. 
-
-		return the value by using document.querySelector.getAttribute("href"); we can also set attribute using setAttribute. 
-
-		This can be used to set and change attributes.
-
-		Getting down to do a course.  
-
-
+	<div>
+		<h2>Manipulate Attributes</h2>
+		<p>Everything inside of an HTML tag is an attribute.</p>
+		<p>You can find out which attributes are on an element by using document.querySelector("").attributes </p>
+		<p>For example, we can return the value by using document.querySelector.getAttribute("href"); we can also set attribute using setAttribute("href", value).</p>
 	</div>
-
-	<ul>
-		<li>inner HTML -> Very useful property that I have previously used. can be used to replace an element's text. <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">REad More here</a></li>
-	</ul>
-
-
-
-	<ul>
+	<div>
+		<h2>Supplementary Materials</h2>
+		<ul>
 		<li><a href="https://addons.mozilla.org/en-US/firefox/addon/dom-treemap/" target="_blank">DOM Tree Extension Firefox</a></li>
 		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">MDN Resource</a></li>
 		<li><a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank">W3Schools</a></li>
-
 		<li><a href="https://www.w3schools.com/jsref/prop_style_color.asp" target="_blank">Styling a Color using DOM </a></li>
 	</ul>
+
+	</div>
+	
 </body>
 </html>
