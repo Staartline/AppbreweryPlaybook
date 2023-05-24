@@ -8,12 +8,12 @@
 <body>
 	<h1>Functions | <a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">W3Schools</a></h1>
 	<div>
-		<p>We can create and run functions that take a list or instructions and package it into a named command.</p>
+		<p>We can create and run functions that take a list or instructions and package it into a named command. This is to remove repetitious code and to aid in debugging.</p>
 		<p>function functionName(){instructions;}</p>
 		<p>Called by using functionName();</p>
 
 		<p>You need the function keyword when you define the function.</p>
-		<p>The variable naming rules apply to funtions.</p>
+		<p>The variable naming rules apply to funtions, so they are named using camelCase.</p>
 
 		<p>Console.log() -> Shows items inside console. </p>
 
@@ -21,68 +21,52 @@
 	</div>
 
 	<div>
-		<h2>Unsorted</h2>
-		<p>Functions are used to remove repetitions and can be used for debugging. 
-			Functions named using camelcase
+		<h2>Parameters and Arguments</h2>
+		<p>function functionName(input parameter){somecodethatusestheparameterhere;}</p>
+		<p>functionName(argument);</p>
+		<p>When using functions, a parameter is found between the (). When you call the function, the argument goes between the ().</p>
+		<p>function function(stringa){} -> stringa is the parameter. Parameters are used to take in a value or variable which will then be used somewhere inside of the function. </p>
+		<p>function(stringb); -> stringb is the argument. This will be used as a variable value in the code.</p>
 
+		<p>Functions do not always need to have a parameter. Sometimes, they can stay empty.</p>
 
-			Parameters and Arguments
-			Parameters go between the ()
-			Arguments are used when the function is called, and goes between the (). 
+			
+		<h3>Methods</h3>
+		<ul>
+			<li>Math.floor(value); rounds the number down</li>
+			<li>Math.ceiling(value); rounds the number up</li>
+			<li>Math.pow(base, exponent)</li>
+			<li>Math.round(value) -> rounds a number</li>
+		</ul>
 
-			Functions do not always need to take an argument.
+			
+		<h2>Return</h2>
+		<p>Functions that can give an output end with a return. This means that the function can both take an input and export an output, and can return a variable or a calculated value.</p>
 
-			function functionName(inputparameter);
-			functionName(parameter);
+		<p>function getPogs(money){ <br>
+			    return money % 2;<br>
+			}<br>
+			<br>
+			getPogs(5); //returns 1<br></p>
+			
 
-			parameters are used to take in a value or variable which will then be used somewhere inside of the function. 
+		<p>Additionally, we are able to use a function (f2) inside of a function(f!), and have our internal function(f2) return a value that is used in the external function(f1). This is useful when we change multiple values and replace them with variable values.</p>
+		<p>	function function1(value){<br>
+			    function2(value);<br>
+			}<br>
+			<br>
+			function function2(value){<br>
+			    value+=2;<br>
+			}<br></p>
 
-			math.floor(value); rounds the number down
-			math.ceiling(value); rounds the number up
+		<h2>BMI Calculator</h2>
+		<p>BMI = weight kg / height ^2(m^2)</p>
+		<p>	function bmiCalc(height, weight){ <br>
+			    var BMI = weight/(height * height);<br>
+			    console.log("Your BMI is " + BMI );<br>
+			    return BMI;<br>
+			}<br></p>	
 
-
-			functions that can give an output end with a return. This means that the function can both take an input and export an output. we can return a variable or a calculated value.
-
-			function getPogs(money){
-			    return money % 2;
-			}
-
-			getPogs(5);
-			returns 1. 
-
-
-			Functions resources: 
-			It allows us to use functions inside of functions. This means that we can call a function inside of a function, and have the function return some value, which is then used inside of our first function.
-			function function1(value){
-			    function2(value);
-
-			}
-
-			function function2(value){
-			    value+=2;
-
-
-			}
-
-			Useful when changing multiple values and replacing them with variable values.
-
-			BMI calculator. 
-			BMI = weight kg / height ^2(m^2)
-
-			function bmiCalc(height, weight){
-			    var BMI = weight/(height * height)
-			    console.log("Your BMI is " + BMI )
-			    return BMI;
-			    
-			}
-
-			Math.pow(base, exponent)
-
-			Math.round(value) ->rounds a number
-
-			SEt your expectations
-			Programming is hard, but setting your expectations is important. Do not get ahead of yourself, but do not downplay what you are doing. 
-			More work is more results. </p>
 	</div>
 
 </body>
