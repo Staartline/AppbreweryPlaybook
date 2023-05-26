@@ -9,6 +9,15 @@ h1{
 	font-size: 4rem;
 }
 
+ul{
+	padding-left:0px;
+	list-style: none;
+}
+
+a{
+	color:white;
+}
+
 button{
 	height:100px;
 	width:100px;
