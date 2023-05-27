@@ -3,37 +3,19 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
 	document.querySelectorAll(".drum")[i].addEventListener("click", function (){
 		//this.style = "color:white";
 		var buttonVal = this.innerHTML;
-		
-		switch (buttonVal){
-			case "w":
-				tom1.play();
-				break;
-			case "a":
-				tom2.play();
-				break;
-			case "s":
-				tom3.play();
-				break;
-			case "d":
-				tom4.play();
-				break;
-			case "j":
-				crash.play();
-				break;
-			case "k":
-				kickBass.play();
-				break;
-			case "l":
-				snare.play();
-				break;
-			}
+		playSound(buttonVal);
 	});
 }
 //we can add this to the whole document
 	document.addEventListener("keydown", function (e){
 		//reading furthere here: https://stackoverflow.com/questions/12689995/get-key-value-of-a-key-pressed
 		var keySound = (e.key);
-			switch (keySound){
+		playSound(keySound);
+			
+	});
+
+function playSound(keySound){
+	switch (keySound){
 			case "w":
 				tom1.play();
 				break;
@@ -56,8 +38,7 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
 				snare.play();
 				break;
 			}
-	});
-
+}
 
 //audio constructor
 function AudioInit(filepath){
