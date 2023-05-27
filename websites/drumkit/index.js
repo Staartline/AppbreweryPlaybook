@@ -4,6 +4,7 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
 		//this.style = "color:white";
 		var buttonVal = this.innerHTML;
 		playSound(buttonVal);
+		playAnimation(buttonVal);
 	});
 }
 //we can add this to the whole document
@@ -11,9 +12,12 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
 		//reading furthere here: https://stackoverflow.com/questions/12689995/get-key-value-of-a-key-pressed
 		var keySound = (e.key);
 		playSound(keySound);
+		playAnimation(keySound);
 			
 	});
 
+
+//this will play a relevant sound
 function playSound(keySound){
 	switch (keySound){
 			case "w":
@@ -40,7 +44,7 @@ function playSound(keySound){
 			}
 }
 
-//audio constructor
+//audio constructor (NOT USED)
 function AudioInit(filepath){
 	this.filePath = filepath;
 	this.play = function(){
@@ -49,6 +53,13 @@ function AudioInit(filepath){
 	}
 }
 
+function playAnimation(currentkey){
+
+	document.querySelector("."+ currentkey).classList.add("pressed");
+	//setTimeout(function (){}, timeoutdelay)
+	setTimeout(function (){document.querySelector("."+ currentkey).classList.remove("pressed");}
+	, 1000);
+}
 
 // function playSound(){
 // 	crash.play();
