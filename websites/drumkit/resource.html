@@ -13,12 +13,15 @@
 	<h1>Resource Links</h1>
 
 	<h2>Event Listerner</h2>
+	<p>All events are written in lowercase.</p>
+	<p>We can have multiple eventlisteners per object.</p>
 	<ul>
 		<li><a href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp" target="_blank">Event Listener W3Schools</a></li>
 		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">Event Listener MDN</a></li>
 		<li>element.addEventListerner(event, function, useCapture)</li>
 		<li>click -> used when the element is clocked</li>
 		<li>mousedown -> mouse button is clicked over the element</li>
+		<li>keydown -> Since keypress is depreciated, we can use keydown. can be added to the whole document. Read how to get a key value HERE <a href="https://stackoverflow.com/questions/12689995/get-key-value-of-a-key-pressed" target="_blank">HERE</a></li>
 		<li><a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">HTML DOM Events (Full List of Different Events) </a></li>
 		<li>When using an event listener, we do not use function(), rather, we use function. If we used function(), then the function will be called on page load. We load in the function as an argument to be called later.</li>
 	</ul>
@@ -42,7 +45,41 @@
 	<ul>
 		<li><a href="https://stackoverflow.com/questions/9419263/how-to-play-audio" target="_blank">Stack Overflow</a></li>
 		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio" target="_blank">Audio Constructor</a></li>
+		<li>We create an HTML audio element, which is a variable that stores the audio. It constructs an audio element that has it's own elements. By the way, they all have their own methods.</li>
 	</ul>
+
+	<h2>CSS: Background-Image</h2>\
+	<a href="https://www.w3schools.com/cssref/pr_background-image.php" target="_blank">Assign a background image</a>
+
+	<h2>This</h2>
+	<p>When using a function, if you want to refer to the current object, you can use this.</p>
 	
+	<h2>Objects</h2>
+	<p>We can have many variables for an object that contains info about that object. </p>
+	<p>We can create a variable with some collection of properties inside of it. </p>
+	<p>Object properties are properties inside of a variable. We can also include things such as arrays. </p>
+	<p>We can separate each property with a comma. </p>
+
+	<p>constructor Functions/factory </p>
+	<p>take some number of properties, and can be used to create many many items. </p>
+
+	<p>function Bellboy(name, age, permit, lang){
+		this.name = name;
+		this.age = age;
+		this.permit = permit;
+		this.lang = lang;
+	}</p>
+
+	<p>Create a new object from the constructor</p>
+	<p>var x = new bellboy(timmy, 12, true, [english]);</p>
+
+
+
+	<p>Switch Statements</p>
+	<a href="https://www.w3schools.com/js/js_switch.asp" target="_blank">Switch Statements</a>
+	<p>Takes code down different tracks depending on the variables in the case</p>
+
+
+	<p>Keydown event</p>
 </body>
 </html>
