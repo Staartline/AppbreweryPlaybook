@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JQuery and other JS Libraries</title>
+</head>
+<body>
+	<h1>JS libraries</h1>
+	<p></p>
+	<h2>JQuery | <a href="https://jquery.com/" target="_blank">Official Site</a></h2>
+	<p>A Popular JS library.</p>
+	<p>Allows programmmers to select elements on a page (like a DOM, but simpler). In this caes, we can use jQuery("element") or even $("element")</p>
+	<p>To use it on a website: we are able to download it, or use it through a CDN (<a href="https://developers.google.com/speed/libraries#jquery" target="_blank">Google's is recommended</a>). <a href="https://jquery.com/download/" target="_blank">Download Page</a> | <a href="https://releases.jquery.com/" target="_blank">CDN</a></p>
+	<p></p>
+
+	$()
+	JQuery()
+	Position is important. Place this above other elements that use it, like using bootstrap. 
+	Might be difficult if we place this both inisde the head. 
+	Add Jquery CDN to the head element of the page or above our js script tags
+
+	Change styles using $().css()
+
+
+	Check for readyness using a callback method to check to see if the jquery is ready 
+
+	$(document).ready(function(){
+		//code goes here.
+	})
+
+	If we do not want to use this method, just put the jquery at the end of the body tag.
+	<p>JQuery CSS</p>
+	<ul>
+		<li><a href="https://www.w3schools.com/Js/js_jquery_css.asp" target="_blank">W3Schools</a></li>
+	</ul>
+	$("h1").css("color", "red");
+	Selects the h1, and then change's it's color to red.
+
+
+
+	<p>Minification </p>
+	<a href="https://www.w3schools.com/jquery/" target="_blank">W3Schools JQuery Tutorial</a>
+	<p>all the spaces, newlines, and comments are reduced from a file to reduce it's size. minifier to minify differnet types of codes. it removes comments and spaces. it makes the file smaller, and quicker to load for a user. </p>
+
+	<h2>Select Elements.</h2>
+	Using element itself just selects all the element on screen.
+	$("element").
+	$("element.class")
+	$("#id ")
+
+	<ul><li>[attribute] -> selects all attributes</li></ul>
+
+	To change css
+	$().css(property, change);
+
+
+	To change  a class
+	$().addClass("class1" "class2" "class3")
+	$().removeClass()
+
+	you can add and remove multiple classes by leaving a space inbetween each one
+
+	.hasClass -> checks to see if a class is assigned to a certain element. 
+
+	add attribute
+	$().attr(attribute, change);
+
+	Adding an event listerner
+	$().click(function(){});
+
+	Selects all of the elements that matches the criteria without having to use a loop for this. 
+
+	//document/body.
+	$().keypress(function(event){
+		event.key;
+	})
+
+	$().on("event",function())
+
+
+
+	Adding and removing elements.
+	This is where an element can go. 
+	.before("Html element");
+	.after("html");
+
+	.prepend();
+	.append();
+
+	remove
+
+	.remove();
+
+
+	animations
+
+	.hide()
+	.show()
+	.toggle()
+	.fadeout()
+	.fadein()
+	.fadeToggle()
+	.slideUp()
+	.slideDown()
+	.slideToggle() -> Good for dropdown
+	.animate({css rule to animate to. Css rules with numeric values only.})
+
+	you can chain these methods together. does this in order. 
+	Dont forget to google the meanings when you need to.  
+
+	Change HTML
+	Be careful here, and choose things according to the id and criteria that you want to change in specific.
+	$().html("text and element tags go here"); -> Updates inner HTML
+	$().text("text goes here"); -> Does not account for HTML tags.
+
+
+	<h2>Popular Frameworks</h2>
+</body>
+</html>
